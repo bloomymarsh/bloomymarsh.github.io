@@ -42,17 +42,19 @@ h2 {
 }
 
 /* Container for the grid layout */
+/* Container for the grid layout */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   gap: 10px; /* Space between columns and rows */
-  grid-auto-rows: min-content; /* Rows will adjust based on content */
+  grid-auto-rows: auto; /* Rows will automatically adjust based on content */
+  /* Optional: Set a min-height for rows if needed */
 }
 
 .grid-item {
-    padding: 10px;
+  padding: 10px;
+  border: none; /* Remove borders to make it seamless */
 }
-
 
 /* Card styling */
 .card {
