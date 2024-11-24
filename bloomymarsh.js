@@ -31,7 +31,7 @@ const coffeeShops = [
     location: "Central Park",
     address: "155 7th Ave, New York, NY 10011",
     image:
-      "https://www.canva.com/design/DAGXWxXQ_xk/dghCrVpATrdTXj6Nus5Z2Q/view?embed",
+      "https://drive.google.com/uc?id=11lPcCU0IDhPK9tXva29gec0lSqX2HwTH",
     rating: 4.5
   },
   {
