@@ -48,12 +48,15 @@ h2 {
 
 /* Main Content- Coffee Shop List*/
 .card {
-  border-radius: 12px;
+/*   border-radius: 12px;
   border-color: #334226;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
   font-size: 12px;
   margin: 5px;
+  width: 100%;  /* Take full width */
+  max-width: 350px;  /* Limit max width */
+  margin: 0 auto;  /* Center the cards */
 }
 
 .card-img-top {
