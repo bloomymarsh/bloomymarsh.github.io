@@ -148,7 +148,8 @@ const coffeeShops = [
 // 2b. Styling Automation
 
 // Calling the HTML ID in line 89...
-const coffeeShopListContainer = document.getElementById("coffeeShopList");
+// const coffeeShopListContainer = document.getElementById("coffeeShopList");
+const container = document.querySelector('.container');
 
 // ...to insert the array as a series of continuous content displayed in the HTML
 coffeeShops.forEach((coffeeShop, index) => {
@@ -172,6 +173,7 @@ return `
 </div>
 `;
 }
+
 
 // ––––––––––––––––––––
 
