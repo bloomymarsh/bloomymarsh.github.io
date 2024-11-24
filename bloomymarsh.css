@@ -45,16 +45,14 @@ h2 {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 10px; /* Space between columns and rows */
-  grid-auto-rows: minmax(100px, auto); /* Rows will have a min height but will grow    */
-  grid-template-rows: auto auto auto auto auto;
 }
 
 /* Grid items (cards) */
 .grid-item {
   padding: 10px;
   border: none; /* Remove borders for seamless layout */
-  grid-column: span 4;
   box-sizing: border-box; /* Ensure padding does not affect layout */
   break-inside: avoid;
   
