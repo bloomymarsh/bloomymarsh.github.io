@@ -45,7 +45,7 @@ h2 {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-/*   grid-template-rows: repeat(5, 1fr); */
+  grid-template-rows: repeat(5, 1fr);
   gap: 10px; /* Space between columns and rows */
 }
 
@@ -61,6 +61,7 @@ h2 {
 /* Card styling */
 .card {
   width: 100%; /* Make the card take up full width of the column */
+  height: 100%; /* Make the card take up full width of the column */
   border: none; /* Remove borders */
   display: flex;
   flex-direction: column;
