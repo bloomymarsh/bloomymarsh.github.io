@@ -151,13 +151,13 @@ const coffeeShops = [
 const coffeeShopListContainer = document.getElementById("coffeeShopList");
 // const container = document.querySelector('.container');
 
-// ...to insert the array as a series of continuous content displayed in the HTML
-coffeeShops.forEach((coffeeShop, index) => {
-  coffeeShopListContainer.innerHTML += generateCoffeeShopHTML(
-    coffeeShop,
-    index
-  );
-});
+// // ...to insert the array as a series of continuous content displayed in the HTML
+// coffeeShops.forEach((coffeeShop, index) => {
+//   coffeeShopListContainer.innerHTML += generateCoffeeShopHTML(
+//     coffeeShop,
+//     index
+//   );
+// });
 
 // and here's what needs to be inserted
 function generateCoffeeShopHTML(coffeeShop, index) {
