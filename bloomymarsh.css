@@ -47,6 +47,8 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 10px; /* Space between columns and rows */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Grid items (cards) */
