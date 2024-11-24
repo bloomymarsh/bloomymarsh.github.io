@@ -43,7 +43,7 @@ h2 {
 
 /* Container for the grid layout */
 .container {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(3, 1fr);
 /*   grid-template-rows: masonry; */
   gap: 10px; /* Space between columns and rows */
@@ -55,7 +55,8 @@ h2 {
   border: none; /* Remove borders for seamless layout */
   box-sizing: border-box; /* Ensure padding does not affect layout */
   break-inside: avoid;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 /* Card styling */
