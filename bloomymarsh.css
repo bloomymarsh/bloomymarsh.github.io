@@ -1,9 +1,8 @@
 /* styles.css */
 @font-face {
     font-family: "Amperzand";
-    src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Amperzand.ttf") format("truetype");
+    src: url("https://bloomymarsh.github.io/font/Amperzand.ttf") format("truetype");
 }
-
 
 .stock-ticker {
   font-size: 15px;
