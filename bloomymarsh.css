@@ -8,9 +8,9 @@ body {
   background-color: #f4f4f4;
 }
 
-* {
+/* * {
         font-family: 'Newsletter', sans-serif !important;
-    }
+    } */
 
 header {
 /*   background-color: #3498db; */
@@ -58,34 +58,38 @@ h2 {
 .card {
   width: 100%; /* Make the card take up full width of the column */
   border: none; /* Remove borders */
-  background-color: #f8f9fa; /* Light background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-radius: 8px; /* Rounded corners */
+/*   background-color: #f8f9fa; /* Light background */
+/*   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/*   border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* Ensure no overflow from the card */
 }
 
 .card img {
   width: 100%; /* Ensure image fills the card */
-  height: 200px; /* Fixed height for the image */
+  height: 100%; /* Fixed height for the image */
   object-fit: cover; /* Crop and cover the image */
 }
 
 .card-body {
+  font-family: Newsreader, serif;
   padding: 10px;
 }
 
 .card-title {
+  font-family: Newsreader, serif;
   font-size: 1.1em;
   margin-bottom: 10px;
 }
 
 .card-text {
+  font-family: Newsreader, serif;
   font-size: 0.9em;
   color: #555;
 }
 
 
 footer {
+  font-family: Newsreader, serif;
   color: black;
   padding: 10px;
   text-align: center;
