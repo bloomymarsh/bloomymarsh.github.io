@@ -55,8 +55,6 @@ h2 {
   border: none; /* Remove borders for seamless layout */
   box-sizing: border-box; /* Ensure padding does not affect layout */
   break-inside: avoid;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Card styling */
