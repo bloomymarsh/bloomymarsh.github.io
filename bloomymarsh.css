@@ -8,12 +8,8 @@ body {
   background-color: #f4f4f4;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
-        font-family: 'Newsletter', sans-serif;
-    }
-
- .navbar, .btn, .list-group-item { 
-        font-family: 'Newsletter', sans-serif;
+* {
+        font-family: 'Newsletter', sans-serif !important;
     }
 
 header {
