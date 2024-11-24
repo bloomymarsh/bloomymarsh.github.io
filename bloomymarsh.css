@@ -59,7 +59,6 @@ h2 {
 /* Card styling */
 .card {
   width: 100%; /* Make the card take up full width of the column */
-  height: 100%; /* Make the card take up full width of the column */
   border: none; /* Remove borders */
   display: flex;
   flex-direction: column;
