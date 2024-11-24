@@ -188,7 +188,7 @@ function generateCarouselBoxes(excludedIndex) {
 function generateCoffeeShopHTML(coffeeShop, index) {
 return `
 <div class="col">
-    <div class="card h-100" data-bs-toggle="modal" data-bs-target="#coffeeShopModal${index}"
+    // <div class="card h-100" data-bs-toggle="modal" data-bs-target="#coffeeShopModal${index}"
         data-coffee-shop="${JSON.stringify(coffeeShop)}">
         <img src="${coffeeShop.image}" class="card-img-top" alt="${coffeeShop.name}">
         <div class="card-body">
