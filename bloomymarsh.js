@@ -31,7 +31,7 @@ const coffeeShops = [
     location: "Central Park",
     address: "155 7th Ave, New York, NY 10011",
     image:
-      "https://drive.google.com/uc?id=11lPcCU0IDhPK9tXva29gec0lSqX2HwTH",
+      "https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/IMG_8643.JPG",
     rating: 4.5
   },
   {
