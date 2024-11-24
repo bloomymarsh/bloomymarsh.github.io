@@ -50,12 +50,11 @@ h2 {
 }
 
 /* Grid items (cards) */
-.grid-item {
+/* .grid-item {
   padding: 10px;
   border: none; /* Remove borders for seamless layout */
-  box-sizing: border-box; /* Ensure padding does not affect layout */
-  break-inside: avoid;
-}
+/*   box-sizing: border-box; /* Ensure padding does not affect layout */ */
+/*   break-inside: avoid; }*/
 
 /* Card styling */
 .card {
