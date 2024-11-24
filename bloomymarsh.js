@@ -27,12 +27,11 @@ const coffeeShops = [
     rating: 4.5
   },
   {
-    name: "Coffee Project NY",
-    location: "Chelsea/West Village",
+    name: "AMNH",
+    location: "Central Park",
     address: "155 7th Ave, New York, NY 10011",
     image:
-      "https://www.worldcoffeeportal.com/getattachment/8cca3aa5-db6e-4d8b-8891-71eb943a8b1d/cafe-location-chelsea-interior-2-1200x800.jpg.aspx?lang=en-GB&width=700&height=466",
-    website: "https://coffeeprojectny.com/",
+      "https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/exhibitions/permanent-exhibitions/biodiversity-and-environment-halls/milstein-hall-of-ocean-life/blue-whale/blue-whale-archival-1400-900/4739351-1-eng-US/blue-whale-archival-1400-900.jpg",
     rating: 4.5
   },
   {
