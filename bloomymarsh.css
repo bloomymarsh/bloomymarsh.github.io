@@ -45,7 +45,7 @@ h2 {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: masonry;
+/*   grid-template-rows: masonry; */
   gap: 10px; /* Space between columns and rows */
 }
 
