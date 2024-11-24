@@ -1,4 +1,8 @@
 /* styles.css */
+    @font-face {
+        font-family: "Amperzand"; 
+        src: url("bloomymarsh.github.io/Amperzand.ttf") format("truetype"); 
+    }
 
 /* General body styling */
 body {
