@@ -42,6 +42,94 @@ h2 {
   color: #333;
 }
 
+/* Main Content- Coffee Shop List*/
+.card {
+  border-radius: 12px;
+  border-color: #334226;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.card-img-top {
+  border-radius: 10px;
+  height: 280px; /* Adjust the height as needed */
+  object-fit: cover;
+}
+.card-body {
+  padding: 10px;
+}
+/* Enlarge the card on hover- learned from ChatGPT */
+.card:hover {
+  transform: scale(1.05); /* Increase the scale to make it 5% larger */
+  cursor: cursor; /* Change cursor to indicate interactivity */
+  opacity: 0.8; /* Reduce opacity to 70% when hovering */
+}
+
+.card_carousel_container {
+  overflow: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.box {
+  height: 250px;
+  width: 200px;
+  margin-right: 10px;
+  margin-left: 5px;
+  margin-top: 7px;
+  padding-left: 15px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+}
+
+.box img {
+  height: 200px;
+  width: 200px;
+  border-radius: 12px;
+  margin-top: 0;
+  border: solid #334226;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire box */
+}
+
+.modal-body {
+  line-height: 1.5em;
+}
+
+.container1 {
+  position: relative;
+  text-align: center;
+  color: #334226;
+}
+
+.box:hover {
+  transform: scale(1.05); /* Increase the scale to make it 5% larger */
+  cursor: cursor; /* Change cursor to indicate interactivity */
+  opacity: 0.8; /* Reduce opacity to 70% when hovering */
+}
+/* Default link color */
+#krobrick-website {
+  color: inherit;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Link color on hover */
+#krobrick-website:hover {
+  color: grey; /* Change to grey on hover */
+}
+
+.box img {
+  height: 200px;  /* Fixed height */
+  width: 200px;   /* Fixed width */
+  border-radius: 12px;
+  margin-top: 0;
+  border: solid #334226;
+  object-fit: cover; /* This ensures the image covers the box area without distorting its aspect ratio */
+}
+
 footer {
   background-color: #3498db;
   color: white;
