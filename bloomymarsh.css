@@ -43,37 +43,20 @@ h2 {
 
 /* Container for the grid layout */
 .container {
-  display: flex;
-  grid-template-columns: repeat(3, 1fr);
-/*   grid-template-rows: masonry; */
-  gap: 10px; /* Space between columns and rows */
+  width: 1400px; 
+ margin: 20px auto; 
+ columns: 4; 
+ column-gap: 40px;
+} 
+.container .box {
+  width: 100%; 
+  margin-bottom: 10px;
+} 
+
+.container .box img {
+  max-width: 100%; 
+  border-radius: 15px;
 }
-
-/* Grid items (cards) */
-/* .grid-item {
-  
-  border: none; /* Remove borders for seamless layout */
-/*    /* Ensure padding does not affect layout */ */
-/*    }*/
-
-/* Card styling */
-.card {
-  width: 100%; /* Make the card take up full width of the column */
-  border: none; /* Remove borders */
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  box-sizing: border-box;
-  break-inside: avoid;
-  overflow: hidden; /* Ensure no overflow from the card */
-}
-
-.card img {
-  width: 100%; /* Ensure image fills the card */
-  height: 100%; /* Fixed height for the image */
-  object-fit: cover; /* Crop and cover the image */
-}
-
 .card-body {
   font-family: Newsreader, serif;
   padding: 10px;
