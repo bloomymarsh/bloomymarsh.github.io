@@ -45,8 +45,8 @@ h2 {
 .container {
   width: 1400px; 
  margin: 20px auto; 
- columns: 4; 
- column-gap: 40px;
+ columns: 3; 
+ column-gap: 10px;
 } 
 .container .box {
   width: 100%; 
@@ -55,7 +55,7 @@ h2 {
 
 .container .box img {
   max-width: 100%; 
-  border-radius: 15px;
+/*   border-radius: 15px; */
 }
 .card-body {
   font-family: Newsreader, serif;
