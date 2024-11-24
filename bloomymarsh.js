@@ -157,93 +157,18 @@ coffeeShops.forEach((coffeeShop, index) => {
     index
   );
 });
-// To randomly generate coffee shop carousel cards inside the modal
-function generateCarouselBoxes(excludedIndex) {
-  let carouselBoxes = "";
-  const numberOfBoxes = 6; // Number of boxes you want to show
-  let selectedIndices = new Set();
-
-  while (selectedIndices.size < numberOfBoxes) {
-    let randomIndex = Math.floor(Math.random() * coffeeShops.length);
-    if (randomIndex !== excludedIndex) {
-      selectedIndices.add(randomIndex);
-    }
-  }
-
-  selectedIndices.forEach((index) => {
-    carouselBoxes += `
-      <div class="box">
-        <img src="${coffeeShops[index].image}">
-        <div>
-          <p class="container1">${coffeeShops[index].name}</p>
-        </div>
-      </div>
-    `;
-  });
-  
-  return carouselBoxes;
-}
 
 // and here's what needs to be inserted
 function generateCoffeeShopHTML(coffeeShop, index) {
 return `
 <div class="col">
-     <div class="card h-100" 
-     <!--data-bs-toggle="modal" data-bs-target="#coffeeShopModal${index}"-->
-        data-coffee-shop="${JSON.stringify(coffeeShop)}">
+     <div class="card h-100" data-coffee-shop="${JSON.stringify(coffeeShop)}">
         <img src="${coffeeShop.image}" class="card-img-top" alt="${coffeeShop.name}">
         <div class="card-body">
             <h6 class="card-title">${coffeeShop.name}</h6>
             <p class="card-text">${coffeeShop.location}</p>
         </div>
-    </div>
-</div>
-
-<div class="modal fade" id="coffeeShopModal${index}" tabindex="-1" aria-labelledby="coffeeShopModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="coffeeShopModalLabel">More Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h1>${coffeeShop.name}</h1>
-                <br>
-                <img src="${coffeeShop.image}">
-                <br><br>
-                <p><b>Location:</b> ${coffeeShop.location}</p>
-                <p><b>Address:</b> ${coffeeShop.address}</p>
-                <p><b>Website:</b> <a href="${coffeeShop.website}" target="_blank"
-                        style="color: #334226;">${coffeeShop.website} </a></p>
-                <p><b>Rating:</b> ${coffeeShop.rating}</p>
- <p><b>You might also like:</b></p>
-                <!-- Recommendation Carousel -->
-                <div id="carouselRecommendation${index}" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card_carousel_container">
-                                ${generateCarouselBoxes(index)}
-                                <!-- Add more carousel items as needed -->
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselRecommendation${index}" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselRecommendation${index}" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        
-                    </div>
-                </div>
                 <!-- End of Recommendation Carousel -->
-            </div>
-        </div>
-    </div>
 </div>
 `;
 }
