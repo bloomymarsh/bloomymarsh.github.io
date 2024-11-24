@@ -46,8 +46,13 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   gap: 10px; /* Space between columns and rows */
-  grid-auto-rows: auto; /* Rows will adjust based on content */
+  grid-auto-rows: min-content; /* Rows will adjust based on content */
 }
+
+.grid-item {
+    padding: 10px;
+}
+
 
 /* Card styling */
 .card {
