@@ -150,6 +150,32 @@ coffeeShops.forEach((coffeeShop, index) => {
     index
   );
 });
+// To randomly generate coffee shop carousel cards inside the modal
+function generateCarouselBoxes(excludedIndex) {
+  let carouselBoxes = "";
+  const numberOfBoxes = 6; // Number of boxes you want to show
+  let selectedIndices = new Set();
+
+  while (selectedIndices.size < numberOfBoxes) {
+    let randomIndex = Math.floor(Math.random() * coffeeShops.length);
+    if (randomIndex !== excludedIndex) {
+      selectedIndices.add(randomIndex);
+    }
+  }
+
+  selectedIndices.forEach((index) => {
+    carouselBoxes += `
+      <div class="box">
+        <img src="${coffeeShops[index].image}">
+        <div>
+          <p class="container1">${coffeeShops[index].name}</p>
+        </div>
+      </div>
+    `;
+  });
+  
+  return carouselBoxes;
+}
 
 // and here's what needs to be inserted
 function generateCoffeeShopHTML(coffeeShop, index) {
@@ -213,6 +239,8 @@ return `
 </div>
 `;
 }
+
+// ––––––––––––––––––––
 
 // ––––––––––––––––––––
 
