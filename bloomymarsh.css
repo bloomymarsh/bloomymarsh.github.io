@@ -51,10 +51,10 @@ h2 {
 
 /* Grid items (cards) */
 /* .grid-item {
-  padding: 10px;
+  
   border: none; /* Remove borders for seamless layout */
-/*   box-sizing: border-box; /* Ensure padding does not affect layout */ */
-/*   break-inside: avoid; }*/
+/*    /* Ensure padding does not affect layout */ */
+/*    }*/
 
 /* Card styling */
 .card {
@@ -62,6 +62,9 @@ h2 {
   border: none; /* Remove borders */
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  break-inside: avoid;
   overflow: hidden; /* Ensure no overflow from the card */
 }
 
