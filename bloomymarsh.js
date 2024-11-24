@@ -31,7 +31,7 @@ const coffeeShops = [
     location: "Central Park",
     address: "155 7th Ave, New York, NY 10011",
     image:
-      "https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/exhibitions/permanent-exhibitions/biodiversity-and-environment-halls/milstein-hall-of-ocean-life/blue-whale/blue-whale-archival-1400-900/4739351-1-eng-US/blue-whale-archival-1400-900.jpg",
+      "https://www.canva.com/design/DAGXWxXQ_xk/dghCrVpATrdTXj6Nus5Z2Q/view?embed",
     rating: 4.5
   },
   {
