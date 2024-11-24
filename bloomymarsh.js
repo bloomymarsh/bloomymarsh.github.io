@@ -1,4 +1,11 @@
 // script.js
+document.addEventListener('DOMContentLoaded', function() {
+  coffeeShops.forEach((coffeeShop, index) => {
+    coffeeShopListContainer.innerHTML += generateCoffeeShopHTML(coffeeShop, index);
+  });
+});
+
+
 // 2a. Array
 const coffeeShops = [
   {
