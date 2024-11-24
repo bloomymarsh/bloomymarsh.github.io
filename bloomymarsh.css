@@ -56,7 +56,6 @@ h2 {
   margin: 5px;
   width: 100%;  /* Take full width */
   max-width: 350px;  /* Limit max width */
-  margin: 0 auto;  /* Center the cards */
 }
 
 .card-img-top {
