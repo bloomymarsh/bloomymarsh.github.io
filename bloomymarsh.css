@@ -8,12 +8,7 @@ body {
   background-color: #f4f4f4;
 }
 
-/* * {
-        font-family: 'Newsletter', sans-serif !important;
-    } */
-
 header {
-/*   background-color: #3498db; */
   color: black;
   padding: 20px;
   text-align: center;
@@ -50,7 +45,7 @@ h2 {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 20px; /* Space between columns and rows */
+  gap: 10px; /* Space between columns and rows */
   grid-auto-rows: auto; /* Rows will adjust based on content */
 }
 
@@ -58,9 +53,6 @@ h2 {
 .card {
   width: 100%; /* Make the card take up full width of the column */
   border: none; /* Remove borders */
-/*   background-color: #f8f9fa; /* Light background */
-/*   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-/*   border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* Ensure no overflow from the card */
 }
 
