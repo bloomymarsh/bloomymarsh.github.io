@@ -44,10 +44,9 @@ h2 {
 /* Container for the grid layout */
 .container {
   display: grid;
-/*   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px; /* Space between columns and rows */
-/*   grid-auto-rows: minmax(100px, auto); /* Rows will have a min height but will grow */
+  grid-auto-rows: minmax(100px, auto); /* Rows will have a min height but will grow    */
   grid-template-rows: auto auto auto auto auto;
 }
 
@@ -56,7 +55,7 @@ h2 {
   padding: 10px;
   border: none; /* Remove borders for seamless layout */
   grid-column: span 4;
-/*   box-sizing: border-box; /* Ensure padding does not affect layout */
+  box-sizing: border-box; /* Ensure padding does not affect layout */
   break-inside: avoid;
   
 }
