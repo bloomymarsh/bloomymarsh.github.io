@@ -1,8 +1,9 @@
 /* styles.css */
 @font-face {
-  font-family: "Amperzand";
-  src: url("bloomymarsh.github.io/Amperzand.ttf") format("truetype");
+    font-family: "Amperzand";
+    src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Amperzand.ttf") format("truetype");
 }
+
 
 .stock-ticker {
   font-size: 15px;
@@ -41,6 +42,13 @@
 }
 
 /* General body styling */
+title {
+  font-family: Amperzand, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 body {
   font-family: Newsreader, serif;
   margin: 0;
