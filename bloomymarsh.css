@@ -147,6 +147,12 @@ h2 {
   color: #555;
 }
 
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Stacks items vertically */
+  }
+}
+
 footer {
   font-family: Newsreader, serif;
   color: black;
