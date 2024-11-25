@@ -39,20 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
 // Array of text options
 const headerTexts = [
   "Bloomy ✦ Marsh",
-  "Broom ✦ Mop",
-  "Bold ✦ Mysterious",
-  "Bloody ✦ Mary",
-  "Bright ✦ Moon",
   "Brooklyn ✦ Manhattan",
   "Bandung ✦ Majalaya",
-  "Brave ✦ Master",
+  "Bold ✦ Mysterious",
+  "Beautiful ✦ Mind",
   "Black ✦ Mirror",
-  "Blue ✦ Mountain",
+  "Bloody ✦ Mary",
+  "Broom ✦ Mop",
+  "Bright ✦ Moon",
   "Bulan ✦ Matahari",
+  "Big ✦ Meteor",
   "Butter ✦ Milk",
   "Body ✦ Mist",
-  "Beautiful ✦ Mind",
-  "Bright ✦ Meteor"
+  "Blue ✦ Mountain"
 ];
 
 // Index to keep track of the current text
