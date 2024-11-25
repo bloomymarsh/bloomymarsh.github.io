@@ -110,6 +110,10 @@ nav ul li a {
   text-decoration: none;
 }
 
+/* section {
+  padding: 20px;
+} */
+
 h2 {
   color: #333;
 }
@@ -147,11 +151,27 @@ h2 {
   color: #555;
 }
 
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr; /* Stacks items vertically */
-  }
+.box.box1 {
+  position: relative; /* Keep relative positioning for hover effects */
 }
+
+.box.box1 img {
+  width: 100%; /* Ensure the image adapts to column width */
+  padding-top: 20px; /* Add space at the top */
+}
+
+.box.box1 .posters-hover {
+  display: none;
+  position: absolute; /* Ensure hover content works as intended */
+  top: 0;
+  left: 0;
+}
+
+.box.box1:hover .posters-hover {
+  display: block;
+}
+
+
 
 footer {
   font-family: Newsreader, serif;
