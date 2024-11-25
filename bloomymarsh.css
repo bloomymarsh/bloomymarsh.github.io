@@ -1,13 +1,66 @@
 /* styles.css */
 @font-face {
-    font-family: "Amperzand";
-    src: url("https://bloomymarsh.github.io/font/Amperzand.ttf") format("truetype");
+  font-family: "Amperzand";
+  src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Amperzand.ttf")
+    format("truetype");
+}
+
+/* Ensure proper box-sizing globally */
+* {
+  box-sizing: border-box;
+}
+
+/* Reset body margins to avoid overflow */
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: Newsreader, serif;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; /* Adds space inside the header */
+  width: 100%;
+  max-width: 100%; /* Ensure no overflow */
+}
+
+.header-section.left {
+  width: calc(33.3% - 1px); /* Account for border width */
+  text-align: right;
+  border-right: 2px solid black; /* Right border for the left section */
+  padding-right: 30px;
+}
+
+.header-section.middle {
+  width: 33.3%;
+  text-align: center;
+}
+
+.header-section.right {
+  width: calc(33.3% - 1px); /* Account for border width */
+  text-align: left;
+  border-left: 2px solid black; /* Left border for the right section */
+  padding-left: 30px;
+}
+
+.header-section h4,
+.header-section p {
+  margin: 5px 0; /* Adjust margins for better spacing */
+}
+
+.header-section.middle h1 {
+  font-family: Amperzand, serif;
+  margin: 0;
+  line-height: 1.2; /* Adjust line height for better readability */
 }
 
 .stock-ticker {
   font-size: 15px;
-  padding-block: 8px;
-  border-block: 1px solid;
+  border-block: 3px solid;
   overflow: hidden;
   user-select: none;
   --gap: 20px;
@@ -36,29 +89,11 @@
   }
 }
 
-.stock-ticker .content{
+.stock-ticker .content {
   font-weight: bold;
 }
 
 /* General body styling */
-body {
-  font-family: Newsreader, serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  color: black;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-family: Amperzand, serif;
-  margin: 0;
-}
-
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -86,7 +121,7 @@ h2 {
 .container {
   width: 1400px;
   margin: 20px auto;
-  columns: 3;
+  columns: 5;
   column-gap: 10px;
 }
 .container .box {
