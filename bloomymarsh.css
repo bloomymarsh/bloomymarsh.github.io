@@ -41,10 +41,33 @@ body {
 }
 
 .header-section.right {
-  width: calc(33.3% - 1px); /* Account for border width */
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically align items */
+  gap: 15px; /* Add space between the image and text */
+  width: calc(33.3% - 1px); /* Maintain width and border */
   text-align: left;
-  border-left: 2px solid black; /* Left border for the right section */
+  border-left: 2px solid black;
   padding-left: 30px;
+}
+
+.rightpicsec {
+  position: relative;
+}
+
+.rightpicsec .rightpic-hover {
+  display: none;
+  position: absolute; /* Ensure hover content works as intended */
+  top: 0;
+  left: 0;
+}
+
+.rightpicsec:hover .rightpic-hover {
+  display: block;
+}
+
+.header-section.right div.text-container {
+  display: flex;
+  flex-direction: column; /* Stack the title and paragraph */
 }
 
 .header-section h4,
@@ -157,7 +180,6 @@ h2 {
 
 .box.box1 img {
   width: 100%; /* Ensure the image adapts to column width */
-  padding-top: 20px; /* Add space at the top */
 }
 
 .box.box1 .posters-hover {
