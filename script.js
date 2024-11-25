@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // If luminance is below a certain threshold, it's dark
   if (lum < 0.5) {
-    favicon.href = 'path_to_dark_favicon.png'; // Dark favicon
+    favicon.href = 'font/Krakatoa.png'; // Dark favicon
   } else {
-    favicon.href = 'font/Krakatoa.png'; // Light favicon
+    favicon.href = 'font/Krakatoa putih.png'; // Light favicon
   }
 });
 
