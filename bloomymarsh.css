@@ -120,7 +120,7 @@ h2 {
 
 /* Container for the grid layout */
 .container {
-  width: 1400px;
+  width: 100%;
   margin: 20px auto;
   columns: 5;
   column-gap: 10px;
