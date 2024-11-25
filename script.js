@@ -29,11 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // If luminance is below a certain threshold, it's dark
   if (lum < 0.5) {
-    favicon.href = 'font/Krakatoa putih.png'; // Dark favicon
+    favicon.href = 'path_to_dark_favicon.png'; // Dark favicon
   } else {
     favicon.href = 'font/Krakatoa.png'; // Light favicon
   }
 });
+
 
 // Array of text options
 const headerTexts = [
@@ -45,8 +46,9 @@ const headerTexts = [
   "Brooklyn ✦ Manhattan",
   "Bandung ✦ Majalaya",
   "Brave ✦ Master",
-  "Broken ✦ Mirror",
+  "Black ✦ Mirror",
   "Blue ✦ Mountain",
+  "Bulan ✦ Matahari",
   "Butter ✦ Milk",
   "Body ✦ Mist",
   "Beautiful ✦ Mind",
