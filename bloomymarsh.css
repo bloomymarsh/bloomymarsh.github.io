@@ -94,6 +94,11 @@ body {
   font-weight: bold;
 }
 
+section#about {
+  padding: 0;
+}
+
+
 /* General body styling */
 nav ul {
   list-style-type: none;
