@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Array of text options
 const headerTexts = [
   "Bloomy ✦ Marsh",
+  "Bon ✦ Monde",
   "Brooklyn ✦ Manhattan",
   "Bandung ✦ Majalaya",
   "Bold ✦ Mysterious",
