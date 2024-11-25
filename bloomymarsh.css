@@ -32,7 +32,7 @@ body {
   width: calc(33.3% - 1px); /* Account for border width */
   text-align: right;
   border-right: 2px solid black; /* Right border for the left section */
-  padding-right: 30px;
+  padding-right: 15px;
 }
 
 .header-section.middle {
@@ -47,7 +47,7 @@ body {
   width: calc(33.3% - 1px); /* Maintain width and border */
   text-align: left;
   border-left: 2px solid black;
-  padding-left: 30px;
+  padding-left: 15px;
 }
 
 .rightpicsec {
@@ -117,7 +117,6 @@ body {
   font-weight: bold;
 }
 
-/* General body styling */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -193,8 +192,6 @@ h2 {
   display: block;
 }
 
-
-
 footer {
   font-family: Newsreader, serif;
   color: black;
@@ -203,4 +200,21 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+/* Adjust layout of header and sections for small screens */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    columns: 1;
+  }
 }
