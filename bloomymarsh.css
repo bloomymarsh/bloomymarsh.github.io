@@ -204,12 +204,13 @@ footer {
 
 /* Adjust layout of header and sections for small screens */
 @media (max-width: 768px) {
-  #header {
-    flex-direction: column;
-    align-items: center;
+  /* Hide left and right sections */
+  .header-section.left, 
+  .header-section.right {
+    display: none;
   }
 
-  .header-section {
+  .header-section.middle {
     width: 100%;
     text-align: center;
   }
