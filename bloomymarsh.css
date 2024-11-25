@@ -54,6 +54,7 @@ body {
 
 .header-section.middle h1 {
   font-family: Amperzand, serif;
+  font-size: 40px;
   margin: 0;
   line-height: 1.2; /* Adjust line height for better readability */
 }
