@@ -144,7 +144,7 @@ h2 {
 .container {
   width: 100%;
   margin: 20px auto;
-  columns: 5;
+  columns: 4;
   column-gap: 10px;
 }
 .container .box {
