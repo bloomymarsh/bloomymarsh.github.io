@@ -210,7 +210,7 @@ footer {
 /* Adjust layout of header and sections for small screens */
 @media (max-width: 768px) {
   /* Hide left and right sections */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+/*   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
   .header-section.left,
   .header-section.right {
     display: none;
