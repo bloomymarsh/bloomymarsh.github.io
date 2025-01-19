@@ -84,7 +84,7 @@ setInterval(updateHeaderText, 1000);
       const gameWrapper = document.getElementById("gameWrapper");
 
       // Fetch and load the game.html file
-      fetch("game.html")
+      fetch("ratgame.html")
         .then(response => {
           if (!response.ok) {
             throw new Error("Failed to load game.");
