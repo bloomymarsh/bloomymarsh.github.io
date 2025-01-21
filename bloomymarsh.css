@@ -227,6 +227,142 @@ footer {
   }
 }
 
-#gameIframe {
-  border: none;
+/* #gameIframe {
+  border: none;} */
+
+/* RAT START */
+
+#ratContainer {
+  /*   background-image: url(https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/Ratatouille.png); */
+  /*   width: 315px; */
+  /*   height: 650px; */
+  overflow: hidden;
+  position: relative;
 }
+
+.rectangle {
+  position: absolute;
+  top: -450px;
+  left: 0px;
+  width: 500px;
+  height: 1000px;
+  border: 3px solid black;
+  border-radius: 5rem;
+  outline: 3px ridge;
+  outline-offset: 50px;
+  background-color: lightgray;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+
+button {
+  background: black;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  padding: 5px 5px;
+  cursor: pointer;
+  align-content: center;
+}
+
+#gameTitle {
+  animation: pulse 1s steps(1) infinite;
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  color: black;
+  z-index: 10;
+  font-weight: bold;
+  text-align: right;
+  line-height: 0.8;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Initial size */
+  }
+  50% {
+    transform: scale(1.2); /* Bigger size */
+  }
+  100% {
+    transform: scale(1); /* Back to original size */
+  }
+}
+
+#score {
+  position: absolute;
+  bottom: 75px;
+  right: 65px;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+#time {
+  /*   display: none; */
+  background: black;
+  border: 2px solid grey;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 85%;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+#popupContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-110%, -200%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Make sure the image is on top */
+}
+
+#popupImage {
+  width: 100px; /* Adjust the size of the image */
+  height: auto;
+}
+
+#rat {
+  width: 80%;
+  transform: translate(0px, 100px) rotate(35deg);
+  cursor: pointer;
+}
+
+@keyframes rat1 {
+  0% {
+    transform: translateX(-320px) translateY(550px) rotate(-135deg);
+  }
+  50% {
+    transform: translateX(320px) translateY(-100px) rotate(-135deg);
+  }
+  51% {
+    transform: translateX(320px) translateY(-200px) rotate(45deg);
+  }
+  100% {
+    transform: translateX(-320px) translateY(550px) rotate(45deg);
+  }
+}
+
+#paw {
+  position: absolute;
+  width: 100%;
+  bottom: 150px;
+  left: 200px;
+  transform: rotate(-20deg);
+  transform-origin: bottom center;
+  transition: transform 0.2s;
+  pointer-events: none;
+}
+
