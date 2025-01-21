@@ -75,8 +75,6 @@ function updateHeaderText() {
 // Call the function every second
 setInterval(updateHeaderText, 1000);
 
-
-
 // RAT START
 
 // UI
@@ -112,27 +110,25 @@ function checkCollision() {
   const ratRect = rat.getBoundingClientRect();
   const ratCenterX = ratRect.left + ratRect.width / 2;
   const ratCenterY = ratRect.top + ratRect.height / 2;
-  
-  const circleRect = circle.getBoundingClientRect();
-circleCenterX = circleRect.left + circleRect.width / 2;
-circleCenterY = circleRect.top + circleRect.height / 2;
 
-  
-//   DEBUGGING DETECTOR
-//   circle.style.border = "2px solid red";
-// rat.style.border = "2px solid blue";
-
-//   console.log("Rat center:", ratCenterX, ratCenterY);
-// console.log("Circle center:", circleCenterX, circleCenterY);
-
-  function updateCirclePosition() {
   const circleRect = circle.getBoundingClientRect();
   circleCenterX = circleRect.left + circleRect.width / 2;
   circleCenterY = circleRect.top + circleRect.height / 2;
-}
-window.addEventListener("resize", updateCirclePosition);
-updateCirclePosition(); // Call initially
 
+  //   DEBUGGING DETECTOR
+  //   circle.style.border = "2px solid red";
+  // rat.style.border = "2px solid blue";
+
+  //   console.log("Rat center:", ratCenterX, ratCenterY);
+  // console.log("Circle center:", circleCenterX, circleCenterY);
+
+  function updateCirclePosition() {
+    const circleRect = circle.getBoundingClientRect();
+    circleCenterX = circleRect.left + circleRect.width / 2;
+    circleCenterY = circleRect.top + circleRect.height / 2;
+  }
+  window.addEventListener("resize", updateCirclePosition);
+  updateCirclePosition(); // Call initially
 
   const distance = Math.sqrt(
     Math.pow(ratCenterX - circleCenterX, 2) +
