@@ -92,6 +92,8 @@ const timerElement = document.getElementById("time");
 const startButton = document.getElementById("startButton");
 const restartButton = document.getElementById("restartButton");
 const popupImage = document.createElement("img");
+const gameTitle = document.getElementById("gameTitle");
+
 popupImage.src =
   "https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/!!!.png";
 popupImage.alt = "Popup Image 1";
