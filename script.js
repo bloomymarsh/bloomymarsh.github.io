@@ -2,6 +2,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const favicon = document.getElementById("favicon");
 
+  function rgbToHex(rgb) {
+    const result = rgb.match(/\d+/g);
+    return `#${((1 << 24) + (+result[0] << 16) + (+result[1] << 8) + +result[2])
+      .toString(16)
+      .slice(1)}`;
+  }
+
   function hexToRgb(hex) {
     let r = 0,
       g = 0,
@@ -28,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
   }
 
-  const backgroundColor = window.getComputedStyle(document.body)
-    .backgroundColor;
-  const rgb = hexToRgb(backgroundColor);
+  const backgroundColor = getComputedStyle(document.body).backgroundColor;
+  const hexColor = rgbToHex(backgroundColor);
+  const rgb = hexToRgb(hexColor);
   const lum = luminance(rgb.r, rgb.g, rgb.b);
 
   if (lum < 0.5) {
