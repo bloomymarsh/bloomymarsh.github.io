@@ -1,3 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Kurale&family=Macondo+Swash+Caps&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Notable&family=Quando&family=Quattrocento:wght@400;700&family=Racing+Sans+One&family=Sono:wght@200..800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
+  <title>Bloomy Marsh ✦ Resume</title>
+  <style>
+    @font-face {
+  font-family: "Amperzand";
+  src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Amperzand.ttf")
+    format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: darkcyan;
+}
+
+/* mouse over link */
+a:hover {
+  color: orange;
+}
+
+/* selected link */
+a:active {
+  color: lightblue;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px; /* Adds space inside the header */
+  width: 100%;
+  max-width: 100%; /* Ensure no overflow */
+}
+
+/* .header-section.left {
+  width: calc(33.3% - 1px);
+  text-align: right;
+  border-right: 2px solid black;
+  padding-right: 15px;
+} */
+
+.header-section.middle {
+  width: 100%;
+  text-align: center;
+}
+
+/* .header-section.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: calc(33.3% - 1px);
+  text-align: left;
+  border-left: 2px solid black;
+  padding-left: 15px;
+} */
+
+/* .rightpicsec {
+  position: relative;
+} */
+
+/* .rightpicsec .rightpic-hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* .rightpicsec:hover .rightpic-hover {
+  display: block;
+}
+
+.header-section.right div.text-container {
+  display: flex;
+  flex-direction: column;
+} */
+
+.header-section h4,
+.header-section p {
+  margin: 5px 0; /* Adjust margins for better spacing */
+}
+
+.header-section.middle h1 {
+  font-family: Amperzand, serif;
+  font-size: 35px;
+  margin: 0;
+  line-height: 1.2; /* Adjust line height for better readability */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.stock-ticker {
+  font-size: 15px;
+  border-block: 3px solid;
+  overflow: hidden;
+  user-select: none;
+  --gap: 20px;
+  display: flex;
+  gap: var(--gap);
+}
+
+.stock-ticker ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+  animation: scroll 40s linear infinite;
+}
+
+.stock-ticker:hover ul {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.stock-ticker .content {
+  font-weight: bold;
+}
+
+body {
+  font-family: Newsreader, sans-serif;
+}
+
+.marshafabiola{
+  margin: 20px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  font-size: 12px;
+}
+
+.CVheader {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.contact {
+  text-align: center;
+  font-size: 10px;
+  color: #666;
+}
+
+.section {
+  margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.section h2 {
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.list-item {
+  margin-left: 20px;
+}
+
+#getPDF {
+  font-family: Newsreader, sans-serif;
+  animation: pulse 1s steps(1) infinite;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Distance from the right */
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#getPDF:hover {
+  background-color: #aaacad; /* Darker shade on hover */
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Initial size */
+  }
+  50% {
+    transform: scale(1.1); /* Bigger size */
+  }
+  100% {
+    transform: scale(1); /* Back to original size */
+  }
+}
+
+@media print {
+  #getPDF, header {
+    display: none;
+  }
+}
+  </style>
+    
+</head>
+<body>
 <header>
     <div id="header">
 <!--       <div class="header-section left"> -->
@@ -100,3 +338,5 @@
     <p>Brief description of the project.</p>
   </div>
     </div>
+  </body>
+</html>
