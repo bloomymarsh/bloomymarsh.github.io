@@ -1,77 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Kurale&family=Macondo+Swash+Caps&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Notable&family=Quando&family=Quattrocento:wght@400;700&family=Racing+Sans+One&family=Sono:wght@200..800&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
-  <title>Bloomy Marsh ✦ Resume</title>
-  <style>
-    /* Add some basic styles */
-    body {
-      font-family: Newsreader, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .contact {
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    .section h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
-    .list-item {
-      margin-left: 20px;
-    }
+<header>
+    <div id="header">
+<!--       <div class="header-section left"> -->
+<!--         <h4>Left Section Title</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+<!--       </div> -->
+      <div class="header-section middle">
+        <h1 id="dynamic-header">Bloomy ✦ Marsh</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="marshafabiola.html">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-section right">
+        <div class="rightpicsec">
+<!--           <img class="rightpic" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/Krakatoa%20blank.png" style="height:80px" alt="Right Section Picture" />
+          <img class="rightpic-hover" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/Krakatoa%20colored.png" style="height:80px">
+        </div>
+        <div class="text-container">
+          <h4>Right Section Title</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
+      </div>
+    </div>
+  
+    <div class="stock-ticker">
+    <ul>
+      <li>
+        <span class="content">Issue #26 ✦</span>
+        <span class="content">November 2024 ✦</span>
+      </li>
+  </div>
+  
+  </header>
 
-    #getPDF {
-      font-family: Newsreader, sans-serif;
-      position: fixed;
-      top: 20px;
-      right: 20px;  /* Distance from the right */
-      padding: 10px 20px;
-      border: none;
-    background-color: transparent;
-    outline: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    #getPDF:hover {
-      background-color: #aaacad; /* Darker shade on hover */
-      color: white;
-    }
-
-     @media print {
-      #getPDF {
-        display: none;
-      }
-    }
-    
-  </style>
-</head>
-<body>
-  <button id="getPDF" onclick="window.print()">Download ✦ PDF</button>
+<button id="getPDF" onclick="window.print()"><b>Download ✦ PDF</b></button>
   <div class="marshafabiola">
-  <div class="header">
+  <div class="CVheader">
     <h1>Marsha Fabiola</h1>
-    <p class="contact">mf3579@tc.columbia.edu | https://www.linkedin.com/in/marshafabiola/</p>
+    <p class="contact">mf3579@tc.columbia.edu | linkedin.com/marshafabiola | bloomymarsh.github.io</p>
   </div>
   
   <div class="section">
@@ -102,14 +72,15 @@
       <li class="list-item">Responsibility or achievement 1</li>
       <li class="list-item">Responsibility or achievement 2</li>
     </ul>
-  </div>
+
   <h3>Marketing Executive at <a target="_blank" rel="noopener noreferrer" href="https://www.bettr.group/">Bettr Group Pte Ltd</a>, SG</h3>
     <p>Oct 2021 - Mar 2022</p>
     <ul>
       <li class="list-item">Responsibility or achievement 1</li>
       <li class="list-item">Responsibility or achievement 2</li>
     </ul>
-
+  </div>
+    
   <div class="section">
     <h2>Education</h2>
     <h3>Masters of Arts in Communication and Education - Teachers College Columbia University</h3>
@@ -129,5 +100,3 @@
     <p>Brief description of the project.</p>
   </div>
     </div>
-  </body>
-</html>
