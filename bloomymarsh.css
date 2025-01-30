@@ -376,10 +376,10 @@ button {
 .medium {
   text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
   font-family: Noe, serif;
-  color: #e5e5e5;
+/*   color: #e5e5e5; */
   font-size: 2.26rem;
   text-transform: uppercase;
-  height: 100vh;
+/*   height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
