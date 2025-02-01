@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
 const headerTexts = [
   "Bloomy ✦ Marsh",
   "Bon ✦ Monde",
-  "Brooklyn ✦ Manhattan",
-  "Bandung ✦ Majalaya",
+  // "Brooklyn ✦ Manhattan",
+  // "Bandung ✦ Majalaya",
   "Bold ✦ Mysterious",
   "Beautiful ✦ Mind",
   "Black ✦ Mirror",
@@ -74,6 +74,105 @@ function updateHeaderText() {
 
 // Call the function every second
 setInterval(updateHeaderText, 1000);
+
+// DRAGGABLE OBJECT
+const slides = document.querySelectorAll(".avatars img");
+const slideText = document.getElementById("avatarText");
+const textArray = ["irl", "memoji", "notion faces", "bitmoji"];
+let slideIndex = 0;
+
+// Ensure there's at least one slide before applying the class
+if (slides.length > 0) {
+  slides[slideIndex].classList.add("displaySlide");
+  slideText.textContent = textArray[slideIndex];
+}
+
+function showSlide(index) {
+  if (index >= slides.length) {
+    slideIndex = 0;
+  } else if (index < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  slides.forEach((slide) => {
+    slide.classList.remove("displaySlide");
+  });
+  slides[slideIndex].classList.add("displaySlide");
+  slideText.textContent = textArray[slideIndex];
+}
+
+function prevSlide() {
+  slideIndex--;
+  showSlide(slideIndex);
+}
+
+function nextSlide() {
+  slideIndex++;
+  showSlide(slideIndex);
+}
+
+// START DRAGGING
+let draggableElem = document.getElementById("avatars-container");
+let initialX = 0,
+  initialY = 0;
+let moveElement = false;
+let translateX = 0,
+  translateY = 0;
+
+//Events Object
+let events = {
+  mouse: {
+    down: "mousedown",
+    move: "mousemove",
+    up: "mouseup"
+  },
+  touch: {
+    down: "touchstart",
+    move: "touchmove",
+    up: "touchend"
+  }
+};
+
+// Detect touch device
+const isTouchDevice = () =>
+  "ontouchstart" in window || navigator.maxTouchPoints;
+
+let deviceType = isTouchDevice() ? "touch" : "mouse";
+
+// Start movement
+draggableElem.addEventListener(events[deviceType].down, (e) => {
+  e.preventDefault();
+  draggableElem.style.cursor = "grabbing";
+  let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
+  let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
+
+  initialX = clientX - translateX;
+  initialY = clientY - translateY;
+
+  moveElement = true;
+});
+
+// Move element
+draggableElem.addEventListener(events[deviceType].move, (e) => {
+  if (!moveElement) return;
+
+  let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
+  let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
+
+  translateX = clientX - initialX;
+  translateY = clientY - initialY;
+
+  draggableElem.style.transform = `translate(${translateX}px, ${translateY}px) scale(0.5)`;
+});
+
+// Stop movement
+const stopMovement = () => {
+  moveElement = false;
+  draggableElem.style.cursor = "grab";
+};
+
+draggableElem.addEventListener(events[deviceType].up, stopMovement);
+draggableElem.addEventListener("mouseleave", stopMovement);
 
 // RAT START
 
