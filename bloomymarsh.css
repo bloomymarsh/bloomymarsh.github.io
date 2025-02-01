@@ -1,4 +1,4 @@
-/* styles.css */
+/* FONTS */
 @font-face {
   font-family: "Amperzand";
   src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Amperzand.ttf")
@@ -11,6 +11,7 @@
     format("truetype");
 }
 
+/* LINKS */
 /* unvisited link */
 a:link {
   color: black;
@@ -32,6 +33,7 @@ a:active {
   color: lightblue;
 }
 
+/* GENERAL LAYOUT */
 /* Ensure proper box-sizing globally */
 * {
   box-sizing: border-box;
@@ -46,6 +48,7 @@ body {
   background-color: #f4f4f4;
 }
 
+/* NEWSPAPER TITLE LAYOUT */
 #header {
   display: flex;
   align-items: center;
@@ -109,6 +112,94 @@ body {
   line-height: 1.2; /* Adjust line height for better readability */
 }
 
+/* HEADER */
+.avatars-container {
+  /*     border: 3px solid #73ad21; */
+  cursor: grab;
+  background-image: url(https://cdn.pixabay.com/photo/2018/07/16/10/15/frame-3541621_960_720.png);
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 350px;
+  height: 400px;
+  margin: auto;
+  transform: scale(0.5);
+  position: absolute;
+  top: 5%;
+  left: -2%;
+  z-index: 1000;
+}
+
+.avatars-container img {
+  width: 234px;
+  display: none;
+  position: absolute;
+  top: 36.5%;
+  left: 50.5%;
+  rotate: 0.4deg;
+  transform: translate(-50%, -50%);
+}
+
+img.displaySlide {
+  display: block;
+}
+
+.avatardesc {
+  width: 100%;
+  font-size: 35px;
+  position: absolute;
+  bottom: 80px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: #f4f4f4 -2px 2px;
+}
+
+.prev {
+  color: black;
+  font-size: 50px;
+  position: absolute;
+  left: 30%;
+  bottom: 0%;
+  cursor: pointer;
+}
+
+.prev:hover {
+  color: orange;
+}
+
+.prev:active {
+  font-size: 40px;
+}
+
+.next {
+  font-size: 50px;
+  position: absolute;
+  right: 30%;
+  bottom: 0%;
+  cursor: pointer;
+}
+
+.next:hover {
+  color: orange;
+}
+
+.next:active {
+  font-size: 40px;
+}
+
+#museumlabel {
+  width: 150px;
+  /*     height: 350px;  */
+  border: 1px solid grey;
+  background-color: transparent;
+  position: absolute;
+  top: 41%;
+  left: 4%;
+  /*   text-indent: 15px; */
+  padding: 10px;
+}
+
+/* RUNNING TEXT */
 .stock-ticker {
   font-size: 15px;
   border-block: 3px solid;
@@ -167,7 +258,7 @@ h2 {
   color: #333;
 }
 
-/* Container for the grid layout */
+/* NEWSPAPER CONTENT LAYOUT */
 .container {
   width: 100%;
   margin: 50px auto;
@@ -205,25 +296,39 @@ h2 {
   color: #555;
 }
 
-.box.box1 {
-  position: relative; /* Keep relative positioning for hover effects */
+/* SELECTED PROJECTS */
+fieldset {
+  border: 3px solid #000;
 }
 
-.box.box1 img {
+legend {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+/* AMNH */
+.box.amnh {
+  position: relative;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.box.amnh img {
   width: 100%; /* Ensure the image adapts to column width */
 }
 
-.box.box1 .posters-hover {
+.box.amnh .posters-hover {
   display: none;
   position: absolute; /* Ensure hover content works as intended */
   top: 0;
   left: 0;
 }
 
-.box.box1:hover .posters-hover {
+.box.amnh:hover .posters-hover {
   display: block;
 }
-
 footer {
   font-family: Newsreader, serif;
   color: black;
