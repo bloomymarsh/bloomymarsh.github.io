@@ -111,6 +111,19 @@ function nextSlide() {
   showSlide(slideIndex);
 }
 
+// Ensure the DOM has loaded before adding event listeners
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".prev").addEventListener("touchend", (e) => {
+    e.stopPropagation(); // Prevent interference from drag events
+    prevSlide();
+  });
+
+  document.querySelector(".next").addEventListener("touchend", (e) => {
+    e.stopPropagation();
+    nextSlide();
+  });
+});
+
 // START DRAGGING
 let draggableElem = document.getElementById("avatars-container");
 let initialX = 0,
