@@ -78,13 +78,12 @@ setInterval(updateHeaderText, 1000);
 // DRAGGABLE OBJECT
 const slides = document.querySelectorAll(".avatars img");
 const slideText = document.getElementById("avatarText");
-const textArray = ["irl", "memoji", "notion faces", "bitmoji"];
 let slideIndex = 0;
 
 // Ensure there's at least one slide before applying the class
 if (slides.length > 0) {
   slides[slideIndex].classList.add("displaySlide");
-  slideText.textContent = textArray[slideIndex];
+  slideText.textContent = slides[slideIndex].alt; // Use the alt attribute from the img element
 }
 
 function showSlide(index) {
@@ -98,7 +97,7 @@ function showSlide(index) {
     slide.classList.remove("displaySlide");
   });
   slides[slideIndex].classList.add("displaySlide");
-  slideText.textContent = textArray[slideIndex];
+  slideText.textContent = slides[slideIndex].alt; // Update text to match the current slide's alt attribute
 }
 
 function prevSlide() {
