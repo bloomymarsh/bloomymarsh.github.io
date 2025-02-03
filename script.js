@@ -174,7 +174,7 @@ draggableElem.addEventListener(events[deviceType].move, (e) => {
   translateX = clientX - initialX;
   translateY = clientY - initialY;
 
-  draggableElem.style.transform = `translate(${translateX}px, ${translateY}px) scale(0.5)`;
+  draggableElem.style.transform = `translate(${translateX}px, ${translateY}px)`;
 });
 
 // Stop movement
