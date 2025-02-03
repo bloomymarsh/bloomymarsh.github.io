@@ -1,4 +1,4 @@
-/* FONTS */
+/* styles.css */
 @font-face {
   font-family: "Amperzand";
   src: url("https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/main/font/Amperzand.ttf")
@@ -11,7 +11,6 @@
     format("truetype");
 }
 
-/* LINKS */
 /* unvisited link */
 a:link {
   color: black;
@@ -33,35 +32,37 @@ a:active {
   color: lightblue;
 }
 
-/* GENERAL LAYOUT */
-/* Ensure proper box-sizing globally */
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
-/* Reset body margins to avoid overflow */
 body {
   margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
   font-family: Newsreader, serif;
   padding: 0;
   background-color: #f4f4f4;
 }
 
-/* NEWSPAPER TITLE LAYOUT */
 #header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px; /* Adds space inside the header */
+  padding: 20px;
   width: 100%;
-  max-width: 100%; /* Ensure no overflow */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.header-section h4,
+.header-section p {
+  margin: 5px 0;
 }
 
 .header-section.left {
-  width: calc(33.3% - 1px); /* Account for border width */
+  width: calc(33.3% - 1px);
   text-align: right;
-  border-right: 2px solid black; /* Right border for the left section */
+  border-right: 2px solid black;
   padding-right: 15px;
 }
 
@@ -70,11 +71,33 @@ body {
   text-align: center;
 }
 
+.header-section.middle h1 {
+  font-family: Amperzand, serif;
+  font-size: 35px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
 .header-section.right {
-  display: flex; /* Enable flexbox */
-  align-items: center; /* Vertically align items */
-  gap: 15px; /* Add space between the image and text */
-  width: calc(33.3% - 1px); /* Maintain width and border */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: calc(33.3% - 1px);
   text-align: left;
   border-left: 2px solid black;
   padding-left: 15px;
@@ -86,7 +109,7 @@ body {
 
 .rightpicsec .rightpic-hover {
   display: none;
-  position: absolute; /* Ensure hover content works as intended */
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -97,47 +120,46 @@ body {
 
 .header-section.right div.text-container {
   display: flex;
-  flex-direction: column; /* Stack the title and paragraph */
+  flex-direction: column;
 }
 
-.header-section h4,
-.header-section p {
-  margin: 5px 0; /* Adjust margins for better spacing */
+.museum {
+  /*   border: 3px solid red; */
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #f4f4f4;
 }
 
-.header-section.middle h1 {
-  font-family: Amperzand, serif;
-  font-size: 30px;
-  margin: 0;
-  line-height: 1.2; /* Adjust line height for better readability */
+.museumavatar {
+  /*   border: 3px solid red; */
+  position: absolute;
+  left: 50px;
+  top: 60px;
+  width: 180px;
+  height: 380px;
 }
 
-/* HEADER */
 .avatars-container {
-  /*     border: 3px solid #73ad21; */
+  /*   border: 3px solid #73ad21; */
   cursor: grab;
   background-image: url(https://cdn.pixabay.com/photo/2018/07/16/10/15/frame-3541621_960_720.png);
-  background-size: 350px;
+  background-size: 180px;
   background-repeat: no-repeat;
   background-position: top;
-  width: 350px;
-  height: 400px;
-  margin: auto;
-  transform: scale(0.5);
+  width: 180px;
+  height: 200px;
   position: absolute;
-  top: 5%;
-  left: -2%;
   z-index: 1000;
 }
 
 .avatars-container img {
-  width: 234px;
+  width: 120px;
   display: none;
   position: absolute;
-  top: 36.5%;
-  left: 50.5%;
+  left: 17%;
   rotate: 0.4deg;
-  transform: translate(-50%, -50%);
 }
 
 img.displaySlide {
@@ -146,60 +168,71 @@ img.displaySlide {
 
 .avatardesc {
   width: 100%;
-  font-size: 35px;
+  font-size: 15px;
   position: absolute;
-  bottom: 80px;
+  top: 115px;
   text-align: center;
   font-weight: bold;
   text-shadow: #f4f4f4 -2px 2px;
 }
 
-.prev {
+.prev,
+.next {
   color: black;
-  font-size: 50px;
-  position: absolute;
-  left: 30%;
-  bottom: 0%;
+  font-size: 20px;
   cursor: pointer;
+  position: absolute;
+  bottom: 0px;
 }
-
-.prev:hover {
-  color: orange;
-}
-
-.prev:active {
-  font-size: 40px;
+.prev {
+  left: 30%;
 }
 
 .next {
-  font-size: 50px;
-  position: absolute;
   right: 30%;
-  bottom: 0%;
-  cursor: pointer;
 }
 
+.prev:hover,
 .next:hover {
   color: orange;
 }
 
+.prev:active,
 .next:active {
-  font-size: 40px;
+  font-size: 15px;
 }
 
-#museumlabel {
+.avatarlabel {
   width: 150px;
-  /*     height: 350px;  */
   border: 1px solid grey;
   background-color: transparent;
-  position: absolute;
-  top: 41%;
-  left: 4%;
-  /*   text-indent: 15px; */
+  position: inherit;
+  bottom: 0px;
+  left: 4px;
   padding: 10px;
 }
 
-/* RUNNING TEXT */
+.museumdino {
+  /*   border: 3px solid red; */
+  position: absolute;
+  left: 215px;
+  width: 180px;
+  height: 500px;
+}
+
+.dinolabel {
+  background-color: #f4f4f4;
+  border: 1px solid black;
+  padding: 10px;
+  position: absolute;
+  left: 25px;
+}
+
+.dino {
+  position: absolute;
+  bottom: 2px;
+}
+
 .stock-ticker {
   font-size: 15px;
   border-block: 3px solid;
@@ -221,10 +254,6 @@ img.displaySlide {
   animation: scroll 40s linear infinite;
 }
 
-.stock-ticker:hover ul {
-  animation-play-state: paused;
-}
-
 @keyframes scroll {
   to {
     transform: translateX(calc(-100% - var(--gap)));
@@ -235,37 +264,12 @@ img.displaySlide {
   font-weight: bold;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: black;
-  text-decoration: none;
-}
-
-/* section {
-  padding: 20px;
-} */
-
-h2 {
-  color: #333;
-}
-
-/* NEWSPAPER CONTENT LAYOUT */
 .container {
+  box-sizing: border-box;
   width: 100%;
   margin: 50px auto;
   columns: 3;
   column-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /*   padding: 100px; */
   padding-left: 200px;
   padding-right: 200px;
 }
@@ -277,23 +281,6 @@ h2 {
 
 .container .box img {
   max-width: 100%;
-  /*   border-radius: 15px; */
-}
-.card-body {
-  font-family: Newsreader, serif;
-  padding: 10px;
-}
-
-.card-title {
-  font-family: Newsreader, serif;
-  font-size: 1.1em;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  font-family: Newsreader, serif;
-  font-size: 0.9em;
-  color: #555;
 }
 
 /* SELECTED PROJECTS */
