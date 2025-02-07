@@ -98,7 +98,7 @@ nav ul li a {
   padding-left: 15px;
 }
 
-.rightpicsec {
+/* .rightpicsec {
   position: relative;
 }
 
@@ -111,12 +111,12 @@ nav ul li a {
 
 .rightpicsec:hover .rightpic-hover {
   display: block;
-}
+} */
 
-.header-section.right div.text-container {
+/* .header-section.right div.text-container {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .museum {
   /*   border: 3px solid red; */
@@ -127,33 +127,54 @@ nav ul li a {
   background-color: #f4f4f4;
 }
 
-.museumavatar {
-  /*   border: 3px solid red; */
+.museumwall {
   position: absolute;
-  left: 50px;
+  left: 12%;
+  top: -10%;
+  /*   line-height: 0.5; */
+}
+
+.museumwall h4 {
+  /*   border: 3px solid red; */
+  font-size: 50px;
+  color: grey;
+  /*   position: absolute; */
+  /*   left: 12%;*/
+  top: -40%;
+}
+
+.museumwall p {
+  font-size: 20px;
+  color: grey;
+}
+
+.museumavatar {
+  /*       border: 3px solid red; */
+  /*   transform: scale(1.7); */
+  position: absolute;
+  right: 10%;
   top: 60px;
-  width: 180px;
-  height: 380px;
+  width: 100px;
+  height: 200px;
 }
 
 .avatars-container {
-  /*   border: 3px solid #73ad21; */
-  cursor: grab;
+  /*   border: 3px solid green; */
+  /*   cursor: grab; */
   background-image: url(https://cdn.pixabay.com/photo/2018/07/16/10/15/frame-3541621_960_720.png);
-  background-size: 180px;
+  background-size: 100px;
   background-repeat: no-repeat;
-  background-position: top;
-  width: 180px;
-  height: 200px;
-  position: absolute;
+  width: 100px;
+  height: 115px;
+  position: relative;
   z-index: 1000;
 }
 
 .avatars-container img {
-  width: 120px;
+  width: 65px;
   display: none;
   position: absolute;
-  left: 17%;
+  left: 18%;
   rotate: 0.4deg;
 }
 
@@ -163,9 +184,9 @@ img.displaySlide {
 
 .avatardesc {
   width: 100%;
-  font-size: 15px;
+  font-size: 8px;
   position: absolute;
-  top: 115px;
+  top: 55%;
   text-align: center;
   font-weight: bold;
   text-shadow: #f4f4f4 -2px 2px;
@@ -174,17 +195,14 @@ img.displaySlide {
 .prev,
 .next {
   color: black;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   position: absolute;
-  bottom: 0px;
-}
-.prev {
-  left: 30%;
+  bottom: 0%;
 }
 
 .next {
-  right: 30%;
+  right: 0%;
 }
 
 .prev:hover,
@@ -194,25 +212,27 @@ img.displaySlide {
 
 .prev:active,
 .next:active {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .avatarlabel {
-  width: 150px;
+  width: 80px;
   border: 1px solid grey;
   background-color: transparent;
   position: inherit;
   bottom: 0px;
-  left: 4px;
-  padding: 10px;
+  padding: 3px 9px;
 }
 
 .museumdino {
   /*   border: 3px solid red; */
   position: absolute;
-  left: 215px;
-  width: 180px;
-  height: 500px;
+  left: 10%;
+  bottom: 0px;
+  width: 500px;
+  height: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .dinolabel {
@@ -223,9 +243,87 @@ img.displaySlide {
   left: 25px;
 }
 
+.table {
+  position: inherit;
+  mix-blend-mode: multiply;
+  width: 500px;
+  bottom: -160px;
+  left: -50px;
+  overflow: hidden;
+}
+
+.fatimasec {
+  position: inherit;
+  bottom: 55px;
+  left: 25px;
+  z-index: 1;
+}
+
+.fatima-hover,
+.fatimafirstname,
+.fatimalastname {
+  display: none;
+}
+
+.fatimasec:hover .fatima-hover,
+.fatimasec:hover .fatimafirstname,
+.fatimasec:hover .fatimalastname {
+  display: block;
+}
+
+.fatimasec:hover .fatima {
+  display: none;
+}
+
+.fatima-hover {
+  transform: translateX(-15%) scale(0.9);
+}
+
+.fatimafirstname,
+.fatimalastname {
+  font-family: "Gulzar", serif;
+  position: inherit;
+}
+
+.fatimafirstname {
+  bottom: 160px;
+  left: 25px;
+  transform: rotate(-24deg);
+}
+
+.fatimalastname {
+  transform: rotate(-50deg);
+  left: -15px;
+  top: -4px;
+}
+
+.globe {
+  position: inherit;
+  bottom: 55px;
+  left: 140px;
+  width: 25%;
+  z-index: 2;
+}
+
 .dino {
-  position: absolute;
-  bottom: 2px;
+  position: inherit;
+  bottom: 55px;
+  right: 10px;
+  /*     left: 115px; */
+  /*   width: 25%; */
+}
+
+canvas {
+  /* border: 3px solid red; */
+  height: 400px;
+  width: 400px;
+  position: inherit;
+  right: 0px;
+  bottom: -80px;
+  filter: grayscale(1);
+  mix-blend-mode: color-burn;
+  cursor: grab;
+  z-index: 0;
 }
 
 .stock-ticker {
