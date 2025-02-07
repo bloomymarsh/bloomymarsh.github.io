@@ -43,20 +43,18 @@ document.addEventListener("DOMContentLoaded", function () {
 // header changes
 const headerTexts = [
   "Bloomy ✦ Marsh",
-  "Bon ✦ Monde",
-  // "Brooklyn ✦ Manhattan",
-  // "Bandung ✦ Majalaya",
-  "Bold ✦ Mysterious",
-  "Beautiful ✦ Mind",
-  "Black ✦ Mirror",
-  "Bloody ✦ Mary",
-  "Broom ✦ Mop",
-  "Bright ✦ Moon",
-  "Bulan ✦ Matahari",
-  "Big ✦ Meteor",
-  "Butter ✦ Milk",
-  "Body ✦ Mist",
-  "Blue ✦ Mountain"
+  // "Bloomy ☾ Marsh",
+  // "Bloomy ✮ Marsh",
+  // "Bloomy ☽ Marsh",
+  "Bloomy ✧ Marsh"
+  //   "Bloody ✦ Mary",
+  //   "Broom ✦ Mop",
+  //   "Bright ✦ Moon",
+  //   "Bulan ✦ Matahari",
+  //   "Big ✦ Meteor",
+  //   "Butter ✦ Milk",
+  //   "Body ✦ Mist",
+  //   "Blue ✦ Mountain"
 ];
 
 let currentIndex = 0;
@@ -152,39 +150,121 @@ const isTouchDevice = () =>
 let deviceType = isTouchDevice() ? "touch" : "mouse";
 
 // Start movement
-draggableElem.addEventListener(events[deviceType].down, (e) => {
-  e.preventDefault();
-  draggableElem.style.cursor = "grabbing";
-  let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
-  let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
+// draggableElem.addEventListener(events[deviceType].down, (e) => {
+//   e.preventDefault();
+//   draggableElem.style.cursor = "grabbing";
+//   let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
+//   let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
 
-  initialX = clientX - translateX;
-  initialY = clientY - translateY;
+//   initialX = clientX - translateX;
+//   initialY = clientY - translateY;
 
-  moveElement = true;
-});
+//   moveElement = true;
+// });
 
-// Move element
-draggableElem.addEventListener(events[deviceType].move, (e) => {
-  if (!moveElement) return;
+// // Move element
+// draggableElem.addEventListener(events[deviceType].move, (e) => {
+//   if (!moveElement) return;
 
-  let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
-  let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
+//   let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
+//   let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
 
-  translateX = clientX - initialX;
-  translateY = clientY - initialY;
+//   translateX = clientX - initialX;
+//   translateY = clientY - initialY;
 
-  draggableElem.style.transform = `translate(${translateX}px, ${translateY}px)`;
-});
+//   draggableElem.style.transform = `translate(${translateX}px, ${translateY}px)`;
+// });
 
-// Stop movement
-const stopMovement = () => {
-  moveElement = false;
-  draggableElem.style.cursor = "grab";
-};
+// // Stop movement
+// const stopMovement = () => {
+//   moveElement = false;
+//   draggableElem.style.cursor = "grab";
+// };
 
-draggableElem.addEventListener(events[deviceType].up, stopMovement);
-draggableElem.addEventListener("mouseleave", stopMovement);
+// draggableElem.addEventListener(events[deviceType].up, stopMovement);
+// draggableElem.addEventListener("mouseleave", stopMovement);
+
+("use strict");
+
+/* global THREE */
+
+function main() {
+  const canvas = document.querySelector("#c");
+  const renderer = new THREE.WebGLRenderer({
+    canvas,
+    alpha: true // Enables transparency
+  });
+  renderer.setClearColor(0x000000, 0);
+
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+  );
+  camera.position.set(1, 0.5, 3); // Move back to avoid distortions
+
+  const controls = new THREE.OrbitControls(camera, canvas);
+
+  const scene = new THREE.Scene();
+  scene.background = null;
+
+  // Ambient Lighting
+  var light = new THREE.DirectionalLight(0x404040, 15);
+  scene.add(light);
+  light.castShadows = true;
+
+  const gltfLoader = new THREE.GLTFLoader();
+  gltfLoader.load(
+    "https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/dino.glb",
+    (gltf) => {
+      const root = gltf.scene;
+      root.position.set(0, 0, 0);
+      scene.add(root);
+
+      // compute the box that contains all the stuff
+      // from root and below
+      const box = new THREE.Box3().setFromObject(root);
+
+      const boxSize = box.getSize(new THREE.Vector3()).length();
+      const boxCenter = box.getCenter(new THREE.Vector3());
+
+      // update the Trackball controls to handle the new size
+      controls.maxDistance = boxSize * 2;
+      controls.target.copy(boxCenter);
+      controls.update();
+    }
+  );
+
+  function resizeRendererToDisplaySize(renderer) {
+    const canvas = renderer.domElement;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+      renderer.setSize(width, height, false);
+    }
+    return needResize;
+  }
+
+  function render() {
+    if (resizeRendererToDisplaySize(renderer)) {
+      const canvas = renderer.domElement;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+    }
+    controls.autoRotate = true;
+    controls.update();
+
+    renderer.render(scene, camera);
+
+    requestAnimationFrame(render);
+  }
+
+  requestAnimationFrame(render);
+}
+
+main();
 
 // RAT START
 
