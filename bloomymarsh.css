@@ -30,13 +30,13 @@ a:active {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: red;
-  background: yellow;
+  color: white;
+  background: orange;
 }
 
 ::selection {
-  color: red;
-  background: yellow;
+  color: white;
+  background: orange;
 }
 
 /* * {
