@@ -108,6 +108,11 @@ function nextSlide() {
   showSlide(slideIndex);
 }
 
+function togglePopup() {
+  var modal = document.getElementById("modal");
+  modal.classList.toggle("show"); /* Toggle visibility of the modal */
+}
+
 // Ensure the DOM has loaded before adding event listeners
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".prev").addEventListener("touchend", (e) => {
