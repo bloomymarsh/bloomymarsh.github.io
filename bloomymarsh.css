@@ -451,7 +451,7 @@ canvas {
   width: 20%;
   position: relative;
   left: 65%;
-  bottom: 3.5%;
+  bottom: 2.5%;
   filter: grayscale(1);
   mix-blend-mode: hard-light;
   cursor: grab;
