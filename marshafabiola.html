@@ -47,109 +47,16 @@ a:active {
   max-width: 100%; /* Ensure no overflow */
 }
 
-/* .header-section.left {
-  width: calc(33.3% - 1px);
-  text-align: right;
-  border-right: 2px solid black;
-  padding-right: 15px;
-} */
-
-.header-section.middle {
-  width: 100%;
-  text-align: center;
-}
-
-/* .header-section.right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  width: calc(33.3% - 1px);
-  text-align: left;
-  border-left: 2px solid black;
-  padding-left: 15px;
-} */
-
-/* .rightpicsec {
-  position: relative;
-} */
-
-/* .rightpicsec .rightpic-hover {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
-/* .rightpicsec:hover .rightpic-hover {
-  display: block;
-}
-
-.header-section.right div.text-container {
-  display: flex;
-  flex-direction: column;
-} */
-
-.header-section h4,
-.header-section p {
-  margin: 5px 0; /* Adjust margins for better spacing */
-}
-
-.header-section.middle h1 {
-  font-family: Amperzand, serif;
-  font-size: 30px;
-  margin: 0;
-  line-height: 1.2; /* Adjust line height for better readability */
-  color: black;
-}
-
 nav ul {
   list-style-type: none;
-  padding: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
+table {
+  width: auto;
 }
 
-nav ul li a {
-  color: black;
-  text-decoration: none;
-}
-
-.stock-ticker {
-  font-size: 15px;
-  border-block: 3px solid;
-  overflow: hidden;
-  user-select: none;
-  --gap: 20px;
-  display: flex;
-  gap: var(--gap);
-}
-
-.stock-ticker ul {
-  list-style: none;
-  flex-shrink: 0;
-  min-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--gap);
-  animation: scroll 40s linear infinite;
-}
-
-.stock-ticker:hover ul {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-
-.stock-ticker .content {
-  font-weight: bold;
+th {
+    text-align: left;
 }
 
 body {
@@ -235,108 +142,182 @@ h3 {
     
 </head>
 <body>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Kurale&family=Macondo+Swash+Caps&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Notable&family=Quando&family=Quattrocento:wght@400;700&family=Racing+Sans+One&family=Sono:wght@200..800&display=swap" rel="stylesheet">
+
 <header>
-    <div id="header">
-<!--       <div class="header-section left"> -->
-<!--         <h4>Left Section Title</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-<!--       </div> -->
-      <div class="header-section middle">
-        <h1 id="dynamic-header">Bloomy ✦ Marsh</h1>
-        <nav>
-          <ul>
-            <li><a rel="noopener noreferrer" href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="marshafabiola.html">CV</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header-section right">
-        <div class="rightpicsec">
-<!--           <img class="rightpic" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/Krakatoa%20blank.png" style="height:80px" alt="Right Section Picture" />
-          <img class="rightpic-hover" src="https://raw.githubusercontent.com/bloomymarsh/bloomymarsh.github.io/refs/heads/main/Krakatoa%20colored.png" style="height:80px">
-        </div>
-        <div class="text-container">
-          <h4>Right Section Title</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-        </div>
-      </div>
-    </div>
-  
-    <div class="stock-ticker">
-    <ul>
-      <li>
-        <span class="content">Issue #26 ✦</span>
-        <span class="content">November 2024 ✦</span>
-      </li>
+  <div id="header">
+      <nav>
+        <ul>
+          <li><a target="_blank" rel="noopener noreferrer" href="bloomymarsh.github.io">← Back to Home</a></li>
+        </ul>
+      </nav>
   </div>
-  
-  </header>
+
+</header>
 
 <button id="getPDF" onclick="window.print()"><b>Download ✦ PDF</b></button>
-  <div class="marshafabiola">
+<div class="marshafabiola">
   <div class="CVheader">
-    <h1>Marsha Fabiola</h1>
+          <h1 style="font-family: 'Amperzand', serif; font-size: 35px;">Marsha ✦ Fabiola</h1>
     <p class="contact">mf3579@tc.columbia.edu | linkedin.com/marshafabiola | bloomymarsh.github.io</p>
   </div>
-  
+
   <div class="section">
     <h2>Objective</h2>
     <p>Passionate advocate for STEM education accessibility and gender equality, dedicated to equip youth for the future.</p>
   </div>
 
   <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li class="list-item">Skill 1</li>
-      <li class="list-item">Skill 2</li>
-      <li class="list-item">Skill 3</li>
-    </ul>
+    <table>
+      <tr>
+        <h2>Skills</h2>
+        <th></th>
+      </tr>
+      <tr>
+        <td><i>Core Competencies</i></td>
+        <td>Curriculum Development, Learning Content Development, Project Management, Leadership, Critical Writing, Communications, Web Development, Game Development, AR</td>
+      </tr>
+      <tr>
+        <td><i>Tools</i></td>
+        <td>Salesforce, Schoology, Canvas, Thinkific, 8th Wall, Adobe After Effects, Illustrator, Photoshop, Figma, Canva, Google Spreadsheet, Stata, Microsoft and Google Workspace, Notion</td>
+      </tr>
+      <tr>
+        <td><i>Language</i></td>
+        <td>English, IELTS 7.0 2021; Bahasa Indonesia, Native Language</td>
+      </tr>
+      <tr>
+        <td><i>Programming Language</i></td>
+        <td>Javascript (Three.js, A-Frame)</td>
+      </tr>
+    </table>
   </div>
 
-  <div class="section">
-    <h2>Experience</h2>
-    <h3>Graduate Intern at <a target="_blank" rel="noopener noreferrer" href="https://www.globalcities.org/">Global Cities Inc.</a> – <a target="_blank" rel="noopener noreferrer" href="https://www.bloomberg.org/education/advancing-k-12-education/#global-cities">Bloomberg Philanthropies</a>, NYC</h3>
-    <p>Aug 2024 - Aug 2025</p>
-    <ul>
-      <li class="list-item">Responsibility or achievement 1</li>
-      <li class="list-item">Responsibility or achievement 2</li>
-    </ul>
-    <h3>Head of Education at <a target="_blank" rel="noopener noreferrer" href="generationgirl.org">Generation Girl</a> – Yayasan Generasi Maju Berkarya, JKT</h3>
-    <p>Mar 2022 - Aug 2023</p>
-    <ul>
-      <li class="list-item">Responsibility or achievement 1</li>
-      <li class="list-item">Responsibility or achievement 2</li>
-    </ul>
-
-  <h3>Marketing Executive at <a target="_blank" rel="noopener noreferrer" href="https://www.bettr.group/">Bettr Group Pte Ltd</a>, SG</h3>
-    <p>Oct 2021 - Mar 2022</p>
-    <ul>
-      <li class="list-item">Responsibility or achievement 1</li>
-      <li class="list-item">Responsibility or achievement 2</li>
-    </ul>
-  </div>
-    
   <div class="section">
     <h2>Education</h2>
-    <h3>Masters of Arts in Communication and Education - <a target="_blank" rel="noopener noreferrer" href="https://www.tc.columbia.edu/mathematics-science-and-technology/communication-media-and-learning-technologies-design/degrees--requirements/communication-and-education-ma/">Teachers College Columbia University</a></h3>
-    <p>Aug 2023 - May 2025</p>
-    <p>Fully Funded by <a target="_blank" rel="noopener noreferrer" href="https://lpdp.kemenkeu.go.id/">LPDP MoFA Indonesia</a></p>
-    <h3>YSEALI Academic Fellowship Program in Civic Engagement – <a target="_blank" rel="noopener noreferrer" href="https://www.pdx.edu/center-for-public-service/young-southeast-asian-leaders-initiative-yseali">Portland State University</a></h3>
-    <p>Oct 2022</p>
-    <p>Fully Funded by US Department of State</p>
-    <h3>Bachelors of Communication Studies – <a target="_blank" rel="noopener noreferrer" href="https://www.unpad.ac.id/fakultas/ilmu-komunikasi/prodi-ilmu-komunikasi/">Universitas Padjadjaran</a>, Bandung</h3>
-    <p>Aug 2015 - Mar 2019</p>
-    <p>Scholarships: PPA by MoE Indonesia, GenBI by Central Bank of Indonesia West Java Office</p>
-  </div>
+    <table>
+      <tr>
+        <th>Masters of Arts in Communication and Education - Teachers College Columbia University</th>
+        <th>Sept 2023 – May 2025</th>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><i>Scholarships</i></td>
+        <td>LPDP by Ministry of Finance Indonesia, Scholar of Teachers College Digital Futures Institute</td>
+      </tr>
+      <tr>
+        <td><i>Courses</i></td>
+        <td>Evaluation of Education & Social Programs, Data Analysis for Policy and Decision Making II (Stata), Video Games and Education (Javascript), Theory/Programming in Interactive Media I (Javascript)</td>
+      </tr>
+    </table>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <h3>Project Name</h3>
-    <p>Brief description of the project.</p>
-  </div>
-    
+    <table>
+      <tr>
+        <th>YSEALI Academic Fellowship Program, Portland State University, USA</th>
+        <th>October – November 2022</th>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><i>Scholarships</i></td>
+        <td>US Department of State</td>
+      </tr>
+      <tr>
+        <td><i>Courses</i></td>
+        <td>Strength-based Leadership, Asset-based Community Development (ABCD), DEI, Targeted Universalism, Public School Immersive Education, Non-profit Management, Public-Private Partnership (PPP)</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th>Bachelor of Communication Studies, Padjadjaran University, Indonesia</th>
+        <th>August 2015 – March 2019</th>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><i>Scholarships</i></td>
+        <td>GenBI by Bank of Indonesia (West Java Rep.), 2018; PPA by Ministry of Education and Culture, 2017</td>
+      </tr>
+      <tr>
+        <td><i>Research</i></td>
+        <td>The Effect of Girls’ Self-Efficacy in Gender Socialization towards STEM Careers Decision Making <a target="_blank" rel="noopener noreferrer" href="https://lib.unpad.ac.id/index.php?node=Fakultas+Ilmu+Komunikasi&p=show_detail&id=14429&keywords=">[abstract]</a></td>
+      </tr>
+      <tr>
+        <td><i>Award</i></td>
+        <td>Most Outstanding Student of Communication Studies, 2018; Runner Up, Media Matters Pekom UI, 2018</td>
+      </tr>
+      <tr>
+        <td><i>GPA</i></td>
+        <td>3.65/4.00</td>
+      </tr>
+    </table>
+
+    <div class="section">
+      <h2>Professional Experience</h2>
+      <h3>Graduate Intern at <a target="_blank" rel="noopener noreferrer" href="https://www.globalcities.org/">Global Cities Inc.</a> – <a target="_blank" rel="noopener noreferrer" href="https://www.bloomberg.org/education/advancing-k-12-education/#global-cities">Bloomberg Philanthropies</a>, NYC</h3>
+      <p>Aug 2024 - Aug 2025</p>
+      <ul>
+        <li class="list-item">Responsible in managing Schoology every beginning and end of units of Global Scholar’s one-year long curriculum</li>
+        <li class="list-item">Monitor, review and analyze student work in e-classroom discussion boards for evidence of student learning outcomes as part of program impact measurement</li>
+        <li class="list-item">Archive video asset transcript and consent permission</li>
+        <li class="list-item">Conduct school visits to participating schools across NYC</li>
+        <li class="list-item">Assist the Education Team with interactive videoconference professional development for educators across the globe</li>
+        <li class="list-item">Work on additional research and data analysis projects to advance the organization’s mission</li>
+      </ul>
+      <h3>AR Developer at <a target="_blank" rel="noopener noreferrer" href="https://www.amnh.org/">American Museum of Natural History</a>, NYC</h3>
+      <p>February – April 2024</p>
+      <ul>
+        <li class="list-item">Responsible for developing the interactivity and game mechanism of the Dolphin and Tuna diorama</li>
+        <li class="list-item">Worked closely with Lead of Interaction Design to lead the developer interns</li>
+        <li class="list-item">Worked closely with UI/UX designers to develop the storytelling</li>
+        <li class="list-item">Conducted user testing and research with 15 parents and kids</li>
+      </ul>
+      <h3>Curriculum Advisor at <a target="_blank" rel="noopener noreferrer" href="generationgirl.org">Generation Girl</a> – Yayasan Generasi Maju Berkarya, JKT</h3>
+      <p>August 2023 – December 2024</p>
+      <ul>
+        <li class="list-item">Worked with Rotary Club of Cupertino to develop Flipped Classroom modules for Training-of-Trainers</li>
+      </ul>
+      <h3>Head of Education at <a target="_blank" rel="noopener noreferrer" href="generationgirl.org">Generation Girl</a> – Yayasan Generasi Maju Berkarya, JKT</h3>
+      <p>February 2022 – August 2023</p>
+      <ul>
+        <li class="list-item">Established Flipped Classroom method and systems in the organization operations</li>
+        <li class="list-item">Developed LMS</li>
+        <li class="list-item">Hired and worked with software engineers, data scientists, and UI/UX designers as SMEs to develop standardized curriculum</li>
+        <li class="list-item">Refined syllabus, scriptwriting, worksheets, and quizzes</li>
+        <li class="list-item">Worked with Production team for learning video production</li>
+        <li class="list-item">Recruited and trained mentors for all subjects in the program operations</li>
+        <li class="list-item">Monitored monthly Impact Measurements metrics as performance assurance of the organization goal</li>
+      </ul>
+      <h3>B2B Instructional Designer at <a target="_blank" rel="noopener noreferrer" href="https://www.rakamin.com/">Rakamin Academy</a>, JKT</h3>
+      <p>Aug 2022 – May 2023</p>
+      <ul>
+        <li class="list-item">Worked closely with SMEs to develop syllabus for corporate trainings –– Training purpose, syllabus, clients; Talent bootcamp, Android Services, Bank Mandiri Republik Indonesia; Employee upskilling, Digital Marketing Campaigns, Hotel Indonesia Group; PL/SQL Programming Services, ID/X Partner; Time Management for Managerial Levels, Tiket.com</li>
+      </ul>
+
+      <h3>Class Coordinator at <a target="_blank" rel="noopener noreferrer" href="https://www.rakamin.com/">Rakamin Academy</a>, JKT</h3>
+      <p>Aug 2022 – May 2023</p>
+      <ul>
+        <li class="list-item">Moderated Scrum Master and Data Science class to 150+ students per monthly cohort</li>
+        <li class="list-item">Moderated corporate training to startups and multinational companies</li>
+        <li class="list-item">Managed and moderated Digitalent by Ministry of Communication and Information Indonesia</li>
+        <li class="list-item">Maintained monthly engagement program for 5000+ community members through Discord channels</li>
+      </ul>
+
+      <h3>Marketing Executive at <a target="_blank" rel="noopener noreferrer" href="https://www.bettr.group/">Bettr Group Pte Ltd</a>, SG</h3>
+      <p>Oct 2021 - Mar 2022</p>
+      <ul>
+        <li class="list-item">Executed 4 social media and EDM promotional campaigns; 10th Anniversary, #FeBREWery, International Women’s Day, BCorp Month</li>
+        <li class="list-item">Crafted educational content based on the company's guiding principles</li>
+      </ul>
     </div>
-  </body>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <h3>Rotary International, Training-of-Trainers Curriculum Development</h3>
+      <p>Generation Girl in partnership with Rotary Club of Cupertino and Rotary International developed training modules about conducting flipped classrooms to teach STEM subjects in Indonesia as part of mentor capacity building and pre-program preparation. </p>
+            <h3>AMNH & Teachers College’s DFI, AR Scavenger Hunt Game for EarthFest 2024 <a target="_blank" rel="noopener noreferrer" href="https://www.tc.columbia.edu/articles/2024/may/exploring-biodiversity-through-virtual-reality-/">[news]</a></h3>
+      <p>In celebration of Earth Day 2024, the American Museum of Natural History, collaborating with Columbia University’s Brown Institute, Digital Futures Institute, and Learning the Earth with Artificial Intelligence and Physics (LEAP), launched an AR Scavenger Hunt to educate visitors about carbon cycle. Built upon six dioramas of Milstein Hall of Ocean Life, the game is location-based to immerse users in the physical environment of the museum to find the story of sea animals' contributions in carbon capture under the sea. </p>
+    </div>
+  </div>  </body>
 </html>
