@@ -544,7 +544,7 @@ legend span {
 
 .box.amnh .posters-hover {
   display: none;
-  position: absolute; /* Ensure hover content works as intended */
+/*   position: absolute; */
   top: 0;
   left: 0;
 }
