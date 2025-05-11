@@ -552,6 +552,10 @@ legend span {
   display: block;
 }
 
+.box.amnh:hover .posters {
+  display: none;
+}
+
 footer {
   font-family: Newsreader, serif;
   color: black;
