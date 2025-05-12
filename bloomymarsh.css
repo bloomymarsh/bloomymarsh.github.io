@@ -463,6 +463,20 @@ canvas:hover {
   filter: grayscale(0);
 }
 
+#canvas-hover {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+
 .stock-ticker {
   font-size: 15px;
   border-block: 3px solid;
