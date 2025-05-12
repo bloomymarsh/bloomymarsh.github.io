@@ -195,6 +195,7 @@ let deviceType = isTouchDevice() ? "touch" : "mouse";
 
 function main() {
   const canvas = document.querySelector("#c");
+  const canvasHover = document.getElementById('canvas-hover');
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true // Enables transparency
@@ -226,6 +227,31 @@ function main() {
       const root = gltf.scene;
       root.position.set(0, 0, 0);
       scene.add(root);
+
+      // === Add after scene.add(root); ===
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+let timeoutId = null;
+
+canvas.addEventListener('mousemove', (event) => {
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+  const intersects = raycaster.intersectObject(root, true); // 'true' checks all children
+
+  if (intersects.length > 0) {
+    canvasHover.style.display = 'block';
+    canvasHover.style.left = event.clientX + 10 + 'px';
+    canvasHover.style.top = event.clientY + 10 + 'px';
+
+    clearTimeout(timeoutId); // Prevent multiple timers
+    timeoutId = setTimeout(() => {
+      canvasHover.style.display = 'none';
+    }, 2000);
+  }
+});
 
       // compute the box that contains all the stuff
       // from root and below
