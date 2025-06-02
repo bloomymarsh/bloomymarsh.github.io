@@ -508,25 +508,57 @@ canvas:hover {
   font-weight: bold;
 }
 
-.container {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 50px auto;
-  columns: 3;
-  column-gap: 20px;
-  padding-left: 200px;
-  padding-right: 200px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
 }
 
-.container .box {
-  width: 100%;
-  margin-bottom: 10px;
+.column {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 2rem;
+  /*   border-right: 1px solid #000; */
 }
 
-.container .box img {
+.column:last-child {
+  border-right: none;
+}
+
+.column.left {
+  /*   background: #fff;
+  font-size: 14px;
+  line-height: 2;
+  color: #999; */
+}
+
+.column.middle {
   max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  /*   background: #fff; */
 }
 
+.column.right {
+  /*   background: #fff; */
+}
+
+.column.right img {
+  /*   width: 100%;
+  margin-bottom: 2rem; */
+}
+
+.column {
+  overflow-y: auto;
+  padding: 2rem;
+  border-right: 1px solid #eee;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.column::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
 fieldset {
   border: 3px solid #000;
 }
