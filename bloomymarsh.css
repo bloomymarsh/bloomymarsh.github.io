@@ -548,35 +548,28 @@ canvas:hover {
   margin-bottom: 2rem; */
 }
 
-.resume-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.resume {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  row-gap: 2rem;
+  column-gap: 2rem;
   font-size: 14px;
   line-height: 1.6;
   color: #333;
 }
 
-.row {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start; /* Ensure top alignment */
-}
-
-.label {
-  width: 120px;
+.resume-label {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 0.5px;
   color: #888;
-  flex-shrink: 0;
+  align-self: start; /* key fix: top-align the label */
 }
 
-.content p {
-  margin-bottom: 0.75rem;
+.resume-content {
+  white-space: pre-wrap;
 }
-
 
 .column {
   overflow-y: auto;
