@@ -559,9 +559,9 @@ canvas:hover {
 
 .resume-grid .label {
   font-weight: bold;
-  text-transform: uppercase;
+/*   text-transform: uppercase; */
 /*   font-size: 12px; */
-  letter-spacing: 0.5px;
+/*   letter-spacing: 0.5px; */
 }
 
 .resume-grid .content p {
