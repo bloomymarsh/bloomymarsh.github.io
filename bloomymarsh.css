@@ -552,7 +552,7 @@ canvas:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-/*   font-size: 14px; */
+  font-size: 14px;
 }
 
 .entry {
@@ -563,8 +563,7 @@ canvas:hover {
 
 .tag {
   min-width: 100px;
-  font-weight: bold;
-  font-size: 12px;
+/*   font-size: 12px; */
   letter-spacing: 0.5px;
   line-height: 1.6;
 }
