@@ -662,13 +662,14 @@ footer {
   }
 
   .header-section.middle {
-    display: block;
-    width: 100%;
-    text-align: center;
-    position: static; /* Remove absolute centering */
-    transform: none;
-    padding: 20px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: none;
+  padding-top: 20px;
+  width: 100%;
+  z-index: 20;
+}
 
   canvas#c {
     width: 100%;
