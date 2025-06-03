@@ -562,10 +562,14 @@ canvas:hover {
 }
 
 .tag {
-  min-width: 100px;
-/*   font-size: 12px; */
+  width: 120px; /* or even 100px if you want tighter */
+  flex-shrink: 0;
   letter-spacing: 0.5px;
   line-height: 1.6;
+}
+
+.detail {
+  flex: 1; /* takes up the remaining space */
 }
 
 .detail div {
