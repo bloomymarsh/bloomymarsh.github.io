@@ -644,7 +644,15 @@ footer {
 
 /* Adjust layout of header and sections for small screens */
 @media (max-width: 768px) {
-  /* Hide left/right sections and avatar */
+  #header {
+    display: flex !important; /* <-- Make sure it's not hidden */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+
   .header-section.left,
   .header-section.right,
   #museumavatar,
@@ -654,29 +662,21 @@ footer {
   }
 
   .header-section.middle {
+    display: block;
     width: 100%;
     text-align: center;
+    position: static; /* Remove absolute centering */
+    transform: none;
+    padding: 20px;
   }
 
-  /* Make canvas full height */
   canvas#c {
     width: 100%;
-    height: 100vh;
+    height: 50vh; /* Adjust height as needed */
     display: block;
-  }
-
-  header {
-    height: 100vh;
-    scroll-snap-align: start;
-  }
-
-  html, body {
-    height: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    position: static;
   }
 }
-
 
 /* RAT START */
 
