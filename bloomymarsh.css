@@ -644,8 +644,15 @@ footer {
 
 /* Adjust layout of header and sections for small screens */
 @media (max-width: 768px) {
+
+  * {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
   #header {
     display: flex !important; /* <-- Make sure it's not hidden */
+    background-image: none !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
