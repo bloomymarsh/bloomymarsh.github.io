@@ -644,10 +644,12 @@ footer {
 
 /* Adjust layout of header and sections for small screens */
 @media (max-width: 768px) {
-  /* Hide left and right sections */
-  /*   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  /* Hide left/right sections and avatar */
   .header-section.left,
-  .header-section.right {
+  .header-section.right,
+  #museumavatar,
+  .table,
+  #modal {
     display: none;
   }
 
@@ -656,41 +658,22 @@ footer {
     text-align: center;
   }
 
-  .container {
-    columns: 1;
-    padding: 40px;
-  }
-}
-
-/* Desktop first */
-#mobile-header {
-  display: none;
-}
-
-/* Mobile overrides */
-@media (max-width: 768px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+  /* Make canvas full height */
+  canvas#c {
+    width: 100%;
+    height: 100vh;
+    display: block;
   }
 
   header {
-    display: none;
-  }
-
-  #mobile-header {
-    display: block;
     height: 100vh;
     scroll-snap-align: start;
   }
 
-  canvas#c {
-    width: 100%;
+  html, body {
     height: 100%;
-    display: block;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
   }
 }
 
