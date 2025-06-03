@@ -662,6 +662,39 @@ footer {
   }
 }
 
+/* Desktop first */
+#mobile-header {
+  display: none;
+}
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+
+  header {
+    display: none;
+  }
+
+  #mobile-header {
+    display: block;
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+
+  canvas#c {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+
 /* RAT START */
 
 #ratContainer {
