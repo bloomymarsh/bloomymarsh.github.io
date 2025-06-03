@@ -551,8 +551,8 @@ canvas:hover {
 .resume-block {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  font-size: 14px;
+  gap: 1.5rem;
+  font-size: 12px;
 }
 
 .entry {
