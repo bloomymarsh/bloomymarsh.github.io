@@ -297,6 +297,30 @@ canvas.addEventListener('mousemove', (event) => {
 
 main();
 
+// CAROUSEL LABEL
+document.addEventListener("DOMContentLoaded", function () {
+  const label = document.getElementById("carouselLabel");
+  const columns = document.querySelectorAll(".column");
+  const labels = ["random", "projects", "resume"];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const index = Array.from(columns).indexOf(entry.target);
+        if (index !== -1) {
+          label.textContent = labels[index];
+        }
+      }
+    });
+  }, {
+    root: document.querySelector(".grid-container"),
+    threshold: 0.5,
+  });
+
+  columns.forEach((col) => observer.observe(col));
+});
+
+
 // RAT START
 
 // UI
