@@ -517,7 +517,9 @@ canvas:hover {
 .column {
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-width: none;
   padding: 2rem;
+  -ms-overflow-style: none;
   /*   border-right: 1px solid #000; */
 }
 
@@ -586,8 +588,9 @@ canvas:hover {
 }
 
 .column::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
+
 fieldset {
   border: 3px solid #000;
 }
@@ -686,26 +689,22 @@ footer {
   }
 }
 
-  .grid-container {
-    display: block;
-    overflow: hidden;
-  }
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+}
 
-  .carousel {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    width: 100vw;
-  }
-
-  .carousel .column {
+.column {
+  min-width: 100vw;
+  max-width: 100vw;
   scroll-snap-align: start;
-  flex: 0 0 100vw;
   height: 100vh;
   overflow-y: auto;
-  overflow-x: hidden;
   padding: 1.5rem;
   box-sizing: border-box;
 }
