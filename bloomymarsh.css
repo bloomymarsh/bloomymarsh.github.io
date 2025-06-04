@@ -684,9 +684,8 @@ footer {
     display: block;
     position: static;
   }
-}
 
-.grid-container {
+  .grid-container {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -709,6 +708,9 @@ footer {
   html, body {
     overflow-x: hidden;
   }
+}
+
+
 
 
 /* RAT START */
