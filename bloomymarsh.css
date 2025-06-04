@@ -705,6 +705,18 @@ footer {
   box-sizing: border-box;
 }
 
+  .carousel-label {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #f4f4f4;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
   html, body {
     overflow-x: hidden;
   }
