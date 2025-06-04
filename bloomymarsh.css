@@ -701,13 +701,14 @@ footer {
   }
 
   .carousel .column {
-    scroll-snap-align: start;
-    flex: 0 0 100vw;
-    height: auto;
-    overflow-y: auto;
-    padding: 1.5rem;
-    box-sizing: border-box;
-  }
+  scroll-snap-align: start;
+  flex: 0 0 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
 
   html, body {
     overflow-x: hidden;
