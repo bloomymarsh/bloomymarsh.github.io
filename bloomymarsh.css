@@ -517,6 +517,7 @@ canvas:hover {
 .column {
   overflow-y: auto;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .column:last-child {
