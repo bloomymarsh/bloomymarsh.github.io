@@ -686,35 +686,6 @@ footer {
   }
 }
 
-.grid-container {
-    display: block; /* Don't use grid on mobile */
-  }
-
-  .carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    height: 100vh;
-  }
-
-  .carousel .column {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    overflow-y: auto;
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .column.left,
-  .column.middle,
-  .column.right {
-    border-right: none;
-  }
-}
-
 /* RAT START */
 
 #ratContainer {
