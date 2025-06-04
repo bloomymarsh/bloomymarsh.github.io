@@ -686,6 +686,34 @@ footer {
   }
 }
 
+  .grid-container {
+    display: block;
+    overflow: hidden;
+  }
+
+  .carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100vw;
+  }
+
+  .carousel .column {
+    scroll-snap-align: start;
+    flex: 0 0 100vw;
+    height: auto;
+    overflow-y: auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+
 /* RAT START */
 
 #ratContainer {
