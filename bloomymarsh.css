@@ -721,7 +721,6 @@ footer {
   border-bottom: 2px solid black;
 }
 
-  @media (max-width: 768px) {
   #carouselNav {
     text-align: center;
     font-size: 1.2rem;
@@ -733,7 +732,6 @@ footer {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: white;
   }
 
   #carouselNav span {
