@@ -299,23 +299,27 @@ main();
 
 // CAROUSEL LABEL
 document.addEventListener("DOMContentLoaded", function () {
-  const label = document.getElementById("carouselLabel");
+  const navSpans = document.querySelectorAll("#carouselNav span");
   const columns = document.querySelectorAll(".column");
-  const labels = ["random", "projects", "resume"];
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const index = Array.from(columns).indexOf(entry.target);
-        if (index !== -1) {
-          label.textContent = labels[index];
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = Array.from(columns).indexOf(entry.target);
+          if (index !== -1) {
+            navSpans.forEach((span, i) => {
+              span.classList.toggle("active", i === index);
+            });
+          }
         }
-      }
-    });
-  }, {
-    root: document.querySelector(".grid-container"),
-    threshold: 0.5,
-  });
+      });
+    },
+    {
+      root: document.querySelector(".grid-container"),
+      threshold: 0.5,
+    }
+  );
 
   columns.forEach((col) => observer.observe(col));
 });
