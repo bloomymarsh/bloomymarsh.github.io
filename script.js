@@ -151,48 +151,11 @@ let events = {
 // Detect touch device
 const isTouchDevice = () =>
   "ontouchstart" in window || navigator.maxTouchPoints;
-
 let deviceType = isTouchDevice() ? "touch" : "mouse";
-
-// Start movement
-// draggableElem.addEventListener(events[deviceType].down, (e) => {
-//   e.preventDefault();
-//   draggableElem.style.cursor = "grabbing";
-//   let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
-//   let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
-
-//   initialX = clientX - translateX;
-//   initialY = clientY - translateY;
-
-//   moveElement = true;
-// });
-
-// // Move element
-// draggableElem.addEventListener(events[deviceType].move, (e) => {
-//   if (!moveElement) return;
-
-//   let clientX = deviceType === "touch" ? e.touches[0].clientX : e.clientX;
-//   let clientY = deviceType === "touch" ? e.touches[0].clientY : e.clientY;
-
-//   translateX = clientX - initialX;
-//   translateY = clientY - initialY;
-
-//   draggableElem.style.transform = `translate(${translateX}px, ${translateY}px)`;
-// });
-
-// // Stop movement
-// const stopMovement = () => {
-//   moveElement = false;
-//   draggableElem.style.cursor = "grab";
-// };
-
-// draggableElem.addEventListener(events[deviceType].up, stopMovement);
-// draggableElem.addEventListener("mouseleave", stopMovement);
 
 ("use strict");
 
 /* global THREE */
-
 function main() {
   const canvas = document.querySelector("#c");
   const canvasHover = document.getElementById('canvas-hover');
