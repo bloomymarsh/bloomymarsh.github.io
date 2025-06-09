@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Click to scroll
   allSpans.forEach((span, i) => {
     span.addEventListener("click", () => {
-      columns[i].scrollIntoView({ behavior: "smooth", inline: "start" });
+      columns[i].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
     });
   });
 
