@@ -265,6 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navSpans = document.querySelectorAll("#carouselNav span");
   const columns = document.querySelectorAll(".column");
 
+  // Highlight active nav span on scroll
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -285,7 +286,19 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   columns.forEach((col) => observer.observe(col));
+
+  // Scroll to section on click
+  navSpans.forEach((span) => {
+    span.addEventListener("click", () => {
+      const targetId = span.getAttribute("data-target");
+      const section = document.getElementById(targetId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
 });
+
 
 
 // RAT START
