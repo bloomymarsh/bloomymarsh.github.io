@@ -264,6 +264,14 @@ main();
 document.addEventListener("DOMContentLoaded", function () {
   const navSpans = document.querySelectorAll("#carouselNav span");
   const columns = document.querySelectorAll(".column");
+  const container = document.querySelector(".grid-container");
+
+  // Scroll to section when nav is clicked
+  navSpans.forEach((span, i) => {
+    span.addEventListener("click", () => {
+      columns[i].scrollIntoView({ behavior: "smooth", inline: "start" });
+    });
+  });
 
   // Highlight active nav span on scroll
   const observer = new IntersectionObserver(
@@ -271,34 +279,20 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const index = Array.from(columns).indexOf(entry.target);
-          if (index !== -1) {
-            navSpans.forEach((span, i) => {
-              span.classList.toggle("active", i === index);
-            });
-          }
+          navSpans.forEach((span, i) => {
+            span.classList.toggle("active", i === index);
+          });
         }
       });
     },
     {
-      root: document.querySelector(".grid-container"),
+      root: container,
       threshold: 0.5,
     }
   );
 
   columns.forEach((col) => observer.observe(col));
-
-  // Scroll to section on click
-  navSpans.forEach((span) => {
-    span.addEventListener("click", () => {
-      const targetId = span.getAttribute("data-target");
-      const section = document.getElementById(targetId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
 });
-
 
 
 // RAT START
