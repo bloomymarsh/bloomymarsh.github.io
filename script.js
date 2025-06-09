@@ -262,23 +262,45 @@ main();
 
 // CAROUSEL LABEL
 document.addEventListener("DOMContentLoaded", function () {
-  const navSpans = document.querySelectorAll("#carouselNav span");
+  const columnIds = ["random", "projects", "résumé"];
   const columns = document.querySelectorAll(".column");
   const container = document.querySelector(".grid-container");
 
-  navSpans.forEach((span, i) => {
+  // Create nav HTML once
+  const navHTML = `
+    <div class="carouselNav">
+      <span data-index="0" class="nav-link" data-target="random">random</span>
+      <span data-index="1" class="nav-link" data-target="projects">projects</span>
+      <span data-index="2" class="nav-link" data-target="résumé">résumé</span>
+    </div>
+  `;
+
+  // Inject nav into each column
+  columns.forEach((col) => {
+    col.insertAdjacentHTML("afterbegin", navHTML);
+  });
+
+  const allSpans = document.querySelectorAll(".carouselNav span");
+  const allNavs = document.querySelectorAll(".carouselNav");
+
+  // Click to scroll
+  allSpans.forEach((span, i) => {
     span.addEventListener("click", () => {
       columns[i].scrollIntoView({ behavior: "smooth", inline: "start" });
     });
   });
 
+  // Highlight active
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const index = Array.from(columns).indexOf(entry.target);
-          navSpans.forEach((span, i) => {
-            span.classList.toggle("active", i === index);
+          allNavs.forEach((nav) => {
+            const spans = nav.querySelectorAll("span");
+            spans.forEach((span, i) => {
+              span.classList.toggle("active", i === index);
+            });
           });
         }
       });
@@ -291,6 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   columns.forEach((col) => observer.observe(col));
 });
+
 
 
 // RAT START
