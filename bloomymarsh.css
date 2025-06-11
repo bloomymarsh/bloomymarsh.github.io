@@ -488,6 +488,16 @@ canvas:hover {
   border-right: 2px solid orange;
 }
 
+.typewrite > .wrap {
+  border-right: 0.08em solid orange;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
 .stock-ticker {
   font-size: 15px;
   border-block: 3px solid;
