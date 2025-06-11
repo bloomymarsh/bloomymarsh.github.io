@@ -491,7 +491,15 @@ canvas:hover {
 .typewrite > .wrap {
   border-right: 0.08em solid orange;
   animation: blink-caret 0.75s step-end infinite;
+  display: inline-block;
 }
+
+.typewrite {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
