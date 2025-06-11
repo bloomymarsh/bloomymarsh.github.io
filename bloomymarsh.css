@@ -490,7 +490,7 @@ canvas:hover {
 
 .typewrite > .wrap {
   border-right: 0.08em solid orange;
-  animation: blink-caret 0.15s step-end infinite;
+  animation: blink-caret 0.75s step-end infinite;
   display: inline-block;
 }
 
