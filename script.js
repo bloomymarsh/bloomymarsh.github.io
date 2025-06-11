@@ -260,28 +260,6 @@ canvas.addEventListener('mousemove', (event) => {
 
 main();
 
-// INTRO MOBILE
-document.addEventListener("DOMContentLoaded", function () {
-  const typeTarget = document.querySelector(".typewrite");
-  if (typeTarget) {
-    const text = typeTarget.getAttribute("data-text");
-    let i = 0;
-
-    function type() {
-      if (i < text.length) {
-        typeTarget.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 75); // typing speed
-      } else {
-        typeTarget.style.borderRight = "none"; // remove cursor after typing
-      }
-    }
-
-    type();
-  }
-});
-
-
 // CAROUSEL LABEL
 document.addEventListener("DOMContentLoaded", function () {
   const navSpans = document.querySelectorAll("#carouselNav span");
