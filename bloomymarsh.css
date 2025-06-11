@@ -636,6 +636,10 @@ legend span {
   display: none;
 }
 
+.mobile-only {
+  display: none;
+}
+
 footer {
   font-family: Newsreader, serif;
   color: black;
@@ -741,7 +745,16 @@ footer {
     color: orange;
     opacity: 1;
   }
+  
+.desktop-only {
+    display: none;
+  }
 
+  .mobile-only {
+    display: block;
+    width: 100%; /* Optional: scale for responsiveness */
+  }
+  
   html, body {
     overflow-x: hidden;
   }
