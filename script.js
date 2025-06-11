@@ -266,12 +266,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const columns = document.querySelectorAll(".column");
   const container = document.querySelector(".grid-container");
 
+  // CLICK BEHAVIOR: scroll container horizontally, not full-page
   navSpans.forEach((span, i) => {
     span.addEventListener("click", () => {
-      columns[i].scrollIntoView({ behavior: "smooth", inline: "start" });
+      container.scrollTo({
+        left: i * container.clientWidth,
+        behavior: "smooth"
+      });
     });
   });
 
+  // OBSERVE which carousel is in view and highlight nav
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -291,7 +296,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   columns.forEach((col) => observer.observe(col));
 });
-
 
 
 // RAT START
