@@ -494,10 +494,22 @@ canvas:hover {
   display: inline-block;
 }
 
-.typewrite {
+/* .typewrite {
   text-align: center;
   display: block;
   width: 100%;
+} */
+
+.typewrite.mobile-only {
+  position: absolute;
+  top: 25%; /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+/*   z-index: 10; */
+  text-align: center;
+  width: 100%;
+/*   color: black; */
+  padding: 0 1rem;
 }
 
 
@@ -696,6 +708,7 @@ footer {
     justify-content: center;
     height: 75vh;
     scroll-snap-align: start;
+    position: relative;
   }
 
   .header-section.left,
