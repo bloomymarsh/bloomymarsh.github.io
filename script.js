@@ -496,7 +496,7 @@ let TxtType = function(el, toRotate, period) {
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
         var that = this;
         var delta = 100 - Math.random() * 50; //type and backspace speed
-        if (this.isDeleting) { delta /= 3; } //backspace speed
+        if (this.isDeleting) { delta /= 5; } //backspace speed
         if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
