@@ -502,7 +502,7 @@ canvas:hover {
 
 .typewrite.mobile-only {
   position: absolute;
-  top: 45%; /* adjust as needed */
+  top: 65%; /* adjust as needed */
   left: 50%;
   transform: translateX(-50%);
 /*   z-index: 10; */
