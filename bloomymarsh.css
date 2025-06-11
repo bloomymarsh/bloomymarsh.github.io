@@ -476,6 +476,17 @@ canvas:hover {
   pointer-events: none;
 }
 
+.mobile-only-paragraph {
+  display: none;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Noe, serif;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid orange;
+}
 
 .stock-ticker {
   font-size: 15px;
@@ -692,6 +703,10 @@ footer {
     height: 50vh; /* Adjust height as needed */
     display: block;
     position: static;
+  }
+
+  .mobile-only-paragraph {
+    display: block;
   }
 
  .grid-container {
