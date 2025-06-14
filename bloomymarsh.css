@@ -753,7 +753,7 @@ footer {
   .column {
     min-width: 100vw;
     max-width: 100vw;
-    scroll-snap-align: start;
+/*     scroll-snap-align: start; */
     height: 100vh;
     overflow-y: auto;
     padding: 1.5rem;
