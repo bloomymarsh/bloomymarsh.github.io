@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const lum = luminance(rgb.r, rgb.g, rgb.b);
 
   if (lum < 0.5) {
-    favicon.href = "font/Krakatoa putih.png"; // Dark favicon
-  } else {
-    favicon.href = "font/Krakatoa.png"; // Light favicon
-  }
+  favicon.href = "Krakatoa putih.ico"; // Dark-mode .ico
+} else {
+  favicon.href = "Krakatoa.ico"; // Light-mode .ico
+}
 });
 
 // header changes
