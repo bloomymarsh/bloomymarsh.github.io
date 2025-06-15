@@ -525,3 +525,46 @@ let TxtType = function(el, toRotate, period) {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.11em solid #eee}";
   document.body.appendChild(css);
 }); // <-- Fixed closing bracket and parenthesis
+
+
+
+
+// GenG
+  const correctPassword = "secret123"; // change as needed
+  const openBtn = document.getElementById("openPasswordModal");
+  const modal = document.getElementById("passwordModal");
+  const submitBtn = document.getElementById("submitPassword");
+  const input = document.getElementById("passwordInput");
+  const error = document.getElementById("errorMessage");
+
+  openBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.classList.add("show");
+  });
+
+  submitBtn.addEventListener("click", function () {
+    if (input.value === correctPassword) {
+      window.location.href =
+        "https://generationgirl.notion.site/Marsha-Fabiola-acc4c45a6c95449680b6f99bbc23f9f9?pvs=4";
+    } else {
+      error.style.display = "block";
+    }
+  });
+
+  // Optional: Hide modal if clicked outside or on ESC key
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.classList.remove("show");
+      input.value = "";
+      error.style.display = "none";
+    }
+  });
+
+  window.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      modal.classList.remove("show");
+      input.value = "";
+      error.style.display = "none";
+    }
+  });
+
