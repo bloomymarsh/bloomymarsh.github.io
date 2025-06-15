@@ -686,6 +686,12 @@ legend span {
   width: 120px;
   height: 120px;
   object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.side-image:hover {
+  filter: grayscale(0%);
 }
 
 .side-text {
